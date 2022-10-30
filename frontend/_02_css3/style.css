@@ -74,12 +74,77 @@
 }
 
 #a_link:hover {
-    color: Red;
-    float:right;
+    color: red;
+    float: right;
 }
 
-.clearfix_data{
-    content:"";
+.clearfix_data {
+    content: "";
     clear: both;
     display: block;
+}
+
+/* group selector */
+/* div,p{
+    border:1px solid black;
+} */
+
+/* div>p{
+    border:1px solid black;
+} */
+
+/* div p {
+    border: 1px solid black;
+} */
+
+/* div+p {
+    border: 1px solid black;
+}  */
+
+/* div~p {
+    border: 1px solid black;
+}  */
+/* 
+*{
+    color:blue
+} */
+
+#parag_6 {
+    margin-top: 2rem;
+
+    /*1*2+100+10*2=122px*/
+    border: 1px solid blue;
+    width: 100px;
+    padding: 10px;
+    /*1*2+100+10*2=100px*/
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    color: blue;
+    background-color: black;
+    display: inline-block;
+    padding: 2px 10px;
+    transition: all 1.5s;
+}
+
+ul li:hover {
+    color: black;
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0.8);
+    transform: rotate(360deg);
+    text-transform: capitalize;
+}
+
+html{
+
+}
+
+body{
+    
 }
