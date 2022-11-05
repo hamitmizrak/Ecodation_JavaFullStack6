@@ -24,6 +24,7 @@
 
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap.css"> -->
 
     <!-- jquery UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -31,11 +32,42 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
+    <link rel="stylesheet" href="style.css" />
+
 <body class="container">
     <!-- starts codes -->
-    <br><br><br><br>
+    <br><br>
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
-    <a href="#" class="btn btn-danger d-block">1.click</a>
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    </div>
+
+    <hr>
+    <br>
+    <ul class="list-group d-grid gap-2">
+        <li class="list-group-item bg-danger">item 1</li>
+        <li class="list-group-item">item 2</li>
+        <li class="list-group-item bg-dark text-light">item 3</li>
+        <li class="list-group-item">item 4</li>
+        <li class="list-group-item">item 5</li>
+    </ul>
+
+    <hr>
+    <br>
+    <img src="../images/city-ge60cc7757_1920.jpg" alt="is not picture"
+        class="rounded rounded-circle44 img-thumbnail shadow-lg" />
+
+
+    <div style="height: 300px;">
+        <div class="bg-primary text-white m-4 p-4 border border-warning w-50 h-75">Border</div>
+        <div class="bg-primary text-white m-4 p-4 border-warning border-top">Border</div>
+    </div>
+
+
+    <hr>
+    <br>
+    <a href="#" class="btn btn-danger d-block deneme">1.click</a>
     <a href="#" class="btn btn-danger d-inline-block">2.click</a>
     <a href="#" class="btn btn-danger">3.click</a>
     <a href="#" class="btn btn-danger d-none">4.click</a>
@@ -58,11 +90,10 @@
 
     <hr>
     <br>
-    <div class="bg-dark text-white mt-5 mb-4 ms-4 me-5 p-5">division data</div>
+    <div class="bg-dark text-white mt-5 mb-4 ms-4 me-1 p-4">division data</div>
 
     <hr>
     <br>
-
     <p class="text-white bg-primary text-lowercase text-start">TEXTdata</p>
     <p class="text-white bg-primary text-uppercase text-center">TEXTdata</p>
     <p class="text-capitalize text-end text-muted fw-bold fst-italic">text data</p>
@@ -70,7 +101,7 @@
 
     <hr>
     <br>
-    <p class="text-primary bg-dark">primary</p>
+    <p class="text-white bg-success">primary</p>
     <p class="text-secondary bg-dark">secondary</p>
     <p class="text-warning bg-dark">warning</p>
     <p class="text-danger bg-dark">danger</p>
