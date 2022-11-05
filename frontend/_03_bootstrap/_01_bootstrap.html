@@ -36,7 +36,173 @@
 
 <body class="container">
     <!-- starts codes -->
-    <br><br>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+      </div>
+    </nav>
+
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            This is the first item's accordion body.
+          </div>
+        </div>
+
+
+        <h2 class="accordion-header" id="asd">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="asd" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              This is the first item's accordion body.
+            </div>
+          </div>
+
+      </div>
+      
+    </div>
+
+    <!-- Modal trigger button -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+      Register
+    </button>
+    
+    <!-- Modal Body -->
+   <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div>
+                        <h1>Register</h1>
+                        <form action="#" action="get">
+                            <!-- username -->
+                            <div class="container">
+                                <div class="row">
+                
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control mb-3" autofocus required="true" id="username"
+                                                name="username" placeholder="Kullanıcı adınız ..." />
+                                        </div>
+                                    </div>
+                
+                                    <div class="col-6">
+                                        <!-- email -->
+                                        <div class="form-group">
+                                            <input type="email" class="form-control mb-3" required="true" id="email" name="email"
+                                                placeholder="Kullanıcı email ..." />
+                                        </div>
+                                    </div>
+                
+                                    <!-- password -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control mb-3" required="true" id="password"
+                                                name="password" placeholder="Kullanıcı şifreniz ..." />
+                                        </div>
+                                    </div>
+                
+                                    <div>
+                                        <button type="reset" class="btn btn-danger">Temizle</button>
+                                        <button type="submit" class="btn btn-primary">Üye ol</button>
+                                    </div>
+                                </div> <!-- ends row -->
+                            </div><!-- ends container -->
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+    
+    </script>
+    
+    <hr>
+    <hr>
+    <hr>
+
+
+    <hr>
+    <hr>
+    <hr>
+
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>adi</th>
+                <th>soyadı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>adi1</th>
+                <th>soyadı</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>adi2</th>
+                <th>soyadı2</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>adi3</th>
+                <th>soyadı3</th>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <br>
     <div class="alert alert-primary alert-dismissible fade show" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
