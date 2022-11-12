@@ -194,21 +194,52 @@ document.write(vocabulary.endsWith(" ") + "<br/>");
 
 document.write(vocabulary.toLowerCase().concat("sona ekle") + "<br/>");
 
-document.write(vocabulary.replace(vocabulary,"değiştirdim") + "<br/>");
+document.write(vocabulary.replace(vocabulary, "değiştirdim") + "<br/>");
 
 document.write(vocabulary.substring(1) + "<br/>");
-document.write(vocabulary.substring(1,4) + "<br/>"); //1<=Kelime<=4-1
+document.write(vocabulary.substring(1, 4) + "<br/>"); //1<=Kelime<=4-1
 
 document.write(vocabulary.indexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
 document.write(vocabulary.lastIndexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
 
-document.write(vocabulary.charAt(0) + "<br/>"); 
+document.write(vocabulary.charAt(0) + "<br/>");
+
+//ÖRNEK
+// 1.soru: Kullanıcıdan alınan x ve k değeri için
+// 1.dereceden 2 bilinmeyenli denklem algoritması
+// y=3x+4k;
+// x=5;
+// k=3
+
+//ÖRNEK
+//Kullanıcıdan alınan dereceyi fahranhayt'a değerine çeviren algoritma
+// 2.soru
+// Dereceyi Fahrenhayt
+// (derece*9/5)+32
+
+//ÖRNEK
+//Kullanıcıdan alınan 1 ve 2.sayı için hesap makinası uygulaması algoritması?
+
+//ÖRNEK: Math
+// Örnek-1 (Hesap Makinesi)
+// kullanıcıdan alınan iki sayının dört işlem (Hesap Makinesi)
+// Scanner, cast
+// toplama
+// çıkarma
+// çarpma
+// bölme
+// bölümünden kalan
+// bu iki sayıdan büyük olanın karekökü (Math.sqrt)
+// bu iki sayıdan küçük olanın mutlak değeri (Math.sqrt)
+// bu iki sayıdan küçük olanın alt değer büyük üst değer (Math.pow)
+
+
 
 //ÖDEV-3
 // kullanıcı tarafından girilen bir kelimenin (prompt)
 //S-1) Kaç karakterlidir ?
 //S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
-//S-3) bütün kelimeyi küçük harfle göstermek ? 
+//S-3) bütün kelimeyi küçük harfle göstermek ?
 //S-4) bütün kelimeyi büyük harfle göstermek ?
 //S-5) ilk harf nedir  ? (charAT)
 //S-6) girdiğiniz kelime java ile başlıyor mu  ?
