@@ -149,32 +149,72 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 //SAYI
-let number1 = 14;
-console.log(typeof number1);
-//let sayi; :undefined
-//14/0      :Infinity
-//14/"asd"  :NaN
+// let number1 = 14;
+// console.log(typeof number1);
+// //let sayi; :undefined
+// //14/0      :Infinity
+// //14/"asd"  :NaN
 
-let number2 = 14.531983;
-console.log(number2.toFixed(2))
+// let number2 = 14.531983;
+// console.log(number2.toFixed(2))
 
-//bilimsel gösterim
-let bilimsel = 13E-4;
-console.log(bilimsel)
+// //bilimsel gösterim
+// let bilimsel = 13E-4;
+// console.log(bilimsel)
 
-//Binary(0-1)
-let binaryNumber = 0b010101010;
-console.log(binaryNumber);
+// //Binary(0-1)
+// let binaryNumber = 0b010101010;
+// console.log(binaryNumber);
 
-//Octal(8) (0-1-2-3-4-5-6-7)
-let octalNumber = 07562;
-console.log(octalNumber);
+// //Octal(8) (0-1-2-3-4-5-6-7)
+// let octalNumber = 07562;
+// console.log(octalNumber);
 
-//Decimal(10) (0-1-2-3-4-5-6-7-8-9)
-let decimalNumber = 1010;
-console.log(decimalNumber);
+// //Decimal(10) (0-1-2-3-4-5-6-7-8-9)
+// let decimalNumber = 1010;
+// console.log(decimalNumber);
 
-//Hexedecimal(16) (0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F)
-let hexDecimalNumber = 0xfff;
-console.log(hexDecimalNumber);
+// //Hexedecimal(16) (0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F)
+// let hexDecimalNumber = 0xfff;
+// console.log(hexDecimalNumber);
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+//String
+let vocabulary = "javame JAvaSCript java JAvaSCript";
+document.write(vocabulary + "<br/>");
+document.write(vocabulary.length + "<br/>");
+document.write(vocabulary.trim().length + "<br/>");
+
+document.write(vocabulary.toLowerCase() + "<br/>");
+document.write(vocabulary.toUpperCase() + "<br/>");
+
+document.write(vocabulary.startsWith("J") + "<br/>");
+document.write(vocabulary.endsWith(" ") + "<br/>");
+
+document.write(vocabulary.toLowerCase().concat("sona ekle") + "<br/>");
+
+document.write(vocabulary.replace(vocabulary,"değiştirdim") + "<br/>");
+
+document.write(vocabulary.substring(1) + "<br/>");
+document.write(vocabulary.substring(1,4) + "<br/>"); //1<=Kelime<=4-1
+
+document.write(vocabulary.indexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
+document.write(vocabulary.lastIndexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
+
+document.write(vocabulary.charAt(0) + "<br/>"); 
+
+//ÖDEV-3
+// kullanıcı tarafından girilen bir kelimenin (prompt)
+//S-1) Kaç karakterlidir ?
+//S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
+//S-3) bütün kelimeyi küçük harfle göstermek ? 
+//S-4) bütün kelimeyi büyük harfle göstermek ?
+//S-5) ilk harf nedir  ? (charAT)
+//S-6) girdiğiniz kelime java ile başlıyor mu  ?
+//S-7) girdiğiniz kelimenin sonuna "-ben js öğreniyorum"   ?
+//S-8) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin   ?
+//S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
+
+
 
