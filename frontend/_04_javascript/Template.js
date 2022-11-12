@@ -16,7 +16,7 @@
 
 //var (Global)
 //let(Local) ES6
-//const(Local) ES6 
+//const(Local) ES6
 // var _$degiskenAdi88=44;
 // console.log(_$degiskenAdi88)
 // /*
@@ -180,29 +180,29 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-//String
-let vocabulary = "javame JAvaSCript java JAvaSCript";
-document.write(vocabulary + "<br/>");
-document.write(vocabulary.length + "<br/>");
-document.write(vocabulary.trim().length + "<br/>");
+// //String
+// let vocabulary = "javame JAvaSCript java JAvaSCript";
+// document.write(vocabulary + "<br/>");
+// document.write(vocabulary.length + "<br/>");
+// document.write(vocabulary.trim().length + "<br/>");
 
-document.write(vocabulary.toLowerCase() + "<br/>");
-document.write(vocabulary.toUpperCase() + "<br/>");
+// document.write(vocabulary.toLowerCase() + "<br/>");
+// document.write(vocabulary.toUpperCase() + "<br/>");
 
-document.write(vocabulary.startsWith("J") + "<br/>");
-document.write(vocabulary.endsWith(" ") + "<br/>");
+// document.write(vocabulary.startsWith("J") + "<br/>");
+// document.write(vocabulary.endsWith(" ") + "<br/>");
 
-document.write(vocabulary.toLowerCase().concat("sona ekle") + "<br/>");
+// document.write(vocabulary.toLowerCase().concat("sona ekle") + "<br/>");
 
-document.write(vocabulary.replace(vocabulary, "değiştirdim") + "<br/>");
+// document.write(vocabulary.replace(vocabulary, "değiştirdim") + "<br/>");
 
-document.write(vocabulary.substring(1) + "<br/>");
-document.write(vocabulary.substring(1, 4) + "<br/>"); //1<=Kelime<=4-1
+// document.write(vocabulary.substring(1) + "<br/>");
+// document.write(vocabulary.substring(1, 4) + "<br/>"); //1<=Kelime<=4-1
 
-document.write(vocabulary.indexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
-document.write(vocabulary.lastIndexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
+// document.write(vocabulary.indexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
+// document.write(vocabulary.lastIndexOf("JAvaSCript") + "<br/>"); //1<=Kelime<=4-1
 
-document.write(vocabulary.charAt(0) + "<br/>");
+// document.write(vocabulary.charAt(0) + "<br/>");
 
 //ÖRNEK
 // 1.soru: Kullanıcıdan alınan x ve k değeri için
@@ -216,6 +216,11 @@ document.write(vocabulary.charAt(0) + "<br/>");
 // 2.soru
 // Dereceyi Fahrenhayt
 // (derece*9/5)+32
+
+// let userData = Number(prompt("Lütfen derceyi giriniz"));
+// let result = (userData * 9 / 5) + 32;
+// document.write(result + "<br/>");
+
 
 //ÖRNEK
 //Kullanıcıdan alınan 1 ve 2.sayı için hesap makinası uygulaması algoritması?
@@ -241,7 +246,7 @@ document.write(vocabulary.charAt(0) + "<br/>");
 //S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
 //S-3) bütün kelimeyi küçük harfle göstermek ?
 //S-4) bütün kelimeyi büyük harfle göstermek ?
-//S-5) ilk harf nedir  ? (charAT)
+//S-5) ilk harf nedir  ? (charAt)
 //S-6) girdiğiniz kelime java ile başlıyor mu  ?
 //S-7) girdiğiniz kelimenin sonuna "-ben js öğreniyorum"   ?
 //S-8) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin   ?
