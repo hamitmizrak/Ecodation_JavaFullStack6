@@ -75,41 +75,106 @@
 
 //CAST:
 //String ==> Number
-//Number ==> String
-let value1 = "14";
-console.log(typeof value1)
+// //Number ==> String
+// let value1 = "14";
+// console.log(typeof value1)
 
-value1 = Number(typeof value1);
-console.log(typeof value1)
+// value1 = Number(typeof value1);
+// console.log(typeof value1)
 
-let value2 = 2;
-let result = value1 / value2;
-console.log(result);
+// let value2 = 2;
+// let result = value1 / value2;
+// console.log(result);
 
-//NaN: Not a Number: sayı değildir
+// //NaN: Not a Number: sayı değildir
 
 
-//Infinity: bir sayı/0 bölemezsiniz
-console.log(4/0)
+// //Infinity: bir sayı/0 bölemezsiniz
+// console.log(4/0)
 
-//isNaN eğer false bu bir sayıdır
-console.log(isNaN("asdf"))
+// //isNaN eğer false bu bir sayıdır
+// console.log(isNaN("asdf"))
 
-// //undefined
-// let data;
-// console.log(data)
+// // //undefined
+// // let data;
+// // console.log(data)
 
-//new:  null:  zero:
+// //new:  null:  zero:
 
-console.log("1.satır")
-console.log("2.satır")
-console.log("3.satır\n4.satır")
+// console.log("1.satır")
+// console.log("2.satır")
+// console.log("3.satır\n4.satır")
 //escape character ==> \n
 
 //break:döngüyü kırmak
 //return:metotu kırmak
 //continue:1 kereye mahsus es geç sonra döngüye devam et
+// console.log(Math.min(2, 9, 8, -1555))
+// console.log(Math.max(2, 9, 8, -1555))
+// console.log(Math.abs(-44))
+// console.log(Math.pow(2, 5))
+// console.log(2 ** 5)
+// console.log(Math.sqrt(16))
+
+// console.log(Math.floor(2.9))//alt tabana
+// console.log(Math.ceil(2.1))//üst taban
+// console.log(Math.round(5.5))
+// console.log(Math.round(5.4))
+// console.log(Math.sin(45))
 
 
+// console.log(Math.ceil(Math.random() * 10 + 1))
 
-//Kullanıcıdan aldığımız 2 tane sayıyı toplayan JS algorithm ?
+//////////////////////////////////////////////////////////////////////////////////////
+
+//ÖDEV 1
+// Kullanıcıdan aldığımız 2 tane sayıyı toplayan JS algorithm ?
+// 4işlem toplama çıkarma çarpma bölme
+// let number1,number2,sum=0;
+// number1=Number(prompt("Lütfen 1.sayıyı giriniz"));
+// number2=Number(prompt("Lütfen 2.sayıyı giriniz"));
+// sum=number1+number2;
+// console.log(sum);
+
+
+////ÖDEV 2
+// Math Ödev
+// Kullanıcıda tarafından aldığımız 2 tane sayının
+// s1-) Bu sayılardan en küçüğü nedir ?
+// s2-) Bu sayılardan en büyüğü nedir ?
+// s3-) Bu sayılardan en büyüğü karekökü nedir ?
+// s4-) Bu sayılardan en büyüğü karekökünün üste yuvarlıyalım nedir ?
+// s5-) Bu sayılardan en küçüğü mutlak değeri nedir ?
+// s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım
+
+//////////////////////////////////////////////////////////////////////////////////////
+//SAYI
+let number1 = 14;
+console.log(typeof number1);
+//let sayi; :undefined
+//14/0      :Infinity
+//14/"asd"  :NaN
+
+let number2 = 14.531983;
+console.log(number2.toFixed(2))
+
+//bilimsel gösterim
+let bilimsel = 13E-4;
+console.log(bilimsel)
+
+//Binary(0-1)
+let binaryNumber = 0b010101010;
+console.log(binaryNumber);
+
+//Octal(8) (0-1-2-3-4-5-6-7)
+let octalNumber = 07562;
+console.log(octalNumber);
+
+//Decimal(10) (0-1-2-3-4-5-6-7-8-9)
+let decimalNumber = 1010;
+console.log(decimalNumber);
+
+//Hexedecimal(16) (0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F)
+let hexDecimalNumber = 0xfff;
+console.log(hexDecimalNumber);
+
