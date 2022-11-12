@@ -49,22 +49,67 @@
 // console.log(data)
 
 //+ - * / % x++ y-- ++X
-let x1=10;
-const x2=3;
+// let x1=10;
+// const x2=3;
 
-var x3=x1+x2;
-console.log(x3);
+// var x3=x1+x2;
+// console.log(x3);
 
-var x4=x1-x2;
-console.log(x4);
+// var x4=x1-x2;
+// console.log(x4);
 
-var x5=x1*x2;
-console.log(x5);
+// var x5=x1*x2;
+// console.log(x5);
 
-var x6=x1/x2;
-console.log(x6);
+// var x6=x1/x2;
+// console.log(x6);
 
-var x7=x1%x2;
-console.log(x7);
+// var x7=x1%x2;
+// console.log(x7);
 
-//
+// kullanıcıdan veri almak
+//NOT: prompt sonucu bir string'tir
+//Eğer bize prompt gelen bir sayı lazım olursa biz bunu cast etmeliyiz
+// let userData=prompt("Lütfen birşeyler yazınız");
+// console.log(userData)
+
+//CAST:
+//String ==> Number
+//Number ==> String
+let value1 = "14";
+console.log(typeof value1)
+
+value1 = Number(typeof value1);
+console.log(typeof value1)
+
+let value2 = 2;
+let result = value1 / value2;
+console.log(result);
+
+//NaN: Not a Number: sayı değildir
+
+
+//Infinity: bir sayı/0 bölemezsiniz
+console.log(4/0)
+
+//isNaN eğer false bu bir sayıdır
+console.log(isNaN("asdf"))
+
+// //undefined
+// let data;
+// console.log(data)
+
+//new:  null:  zero:
+
+console.log("1.satır")
+console.log("2.satır")
+console.log("3.satır\n4.satır")
+//escape character ==> \n
+
+//break:döngüyü kırmak
+//return:metotu kırmak
+//continue:1 kereye mahsus es geç sonra döngüye devam et
+
+
+
+//Kullanıcıdan aldığımız 2 tane sayıyı toplayan JS algorithm ?
