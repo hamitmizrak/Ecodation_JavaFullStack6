@@ -333,6 +333,8 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+// break; döngüyü durdur
+// return function durdurur.
 let result1 = () => {
     let number = 5;
     if (number == 1)
@@ -349,7 +351,7 @@ let result11 = () => {
     document.write(result)
 
 }
-result11()
+//result11()
 
 
 let result2 = () => {
@@ -395,6 +397,68 @@ let result3 = () => {
 }
 //result3()
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+let result4 = () => {
+    //For Döngüsü
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+        sum = sum + i;
+    }
+    document.writeln(sum)
+}
+result4()
+
+
+let result5 = () => {
+    //while Döngüsü
+    let sum = 0;
+    let i = 1;
+    while (i <= 10) {
+        sum = sum + i;
+        //i++;
+        //i=i+1;
+        i += 1;
+    }
+    document.writeln(sum)
+}
+//result5()
+
+
+let result6 = () => {
+    //dowhile Döngüsü
+    let sum = 0;
+    let i = 1;
+    do {
+        sum = sum + i;
+        //i++;
+        i = i + 1;
+        //i += 1;
+    }
+    while (i <= 10);
+    document.writeln(sum)
+}
+//result6()
+
+
+//try-catch
+let result7 = () => {
+    try {
+        alertx("pop-up data")
+           
+    } catch (error) {
+        console.log("Hata mesajı: "+error.message);
+        console.log("Hata mesajı adı: "+error.name);
+        console.log("Hepsi: "+error);
+    }finally{
+     console.log("db.closed: ");
+    }
+    console.log("son satır")
+    throw "Hata var"
+}
+//result7()
 
 
 

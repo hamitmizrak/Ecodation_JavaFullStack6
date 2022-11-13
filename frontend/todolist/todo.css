@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    background-color: rgb(39, 37, 37);
+    color: white;
+}
+
+
+#todo_container ul{
+    list-style-type: none;
+}
+button:hover{
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.8);
+}
+
+/* ////////////////////////////////////////////////  */
+/* add item */
+input[type="text"]:focus{
+    color:rgba(55, 59, 62,.8);
+}
+
+/* ////////////////////////////////////////////////  */
+/*Todo List*/
+li{
+    overflow: hidden;
+}
+
+
+/* ////////////////////////////////////////////////  */
+/* complete_item */
