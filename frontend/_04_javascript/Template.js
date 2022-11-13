@@ -217,7 +217,7 @@
 // Dereceyi Fahrenhayt
 // (derece*9/5)+32
 
-// let userData = Number(prompt("Lütfen derceyi giriniz"));
+// let userData = Number(prompt("Lütfen dereceyi giriniz"));
 // let result = (userData * 9 / 5) + 32;
 // document.write(result + "<br/>");
 
@@ -253,4 +253,31 @@
 //S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//JS: function
+//Java: Method
+//1
+function returnsuzParametresiz() {
+    document.write("returnsuz Parametresiz<br/>")
+}
+returnsuzParametresiz()
 
+//2
+function returnsuzParametreli(surname) {
+    document.write("returnsuz Parametreli " + surname + "<br/>")
+}
+returnsuzParametreli("soyadım")
+
+//3
+function returnluParametresiz() {
+    return "returnlu Parametresiz<br/>";
+}
+let data = returnluParametresiz();
+document.write(data);
+
+//4
+function returnluParametreli(data1, data2) {
+    return "returnlu Parametresiz" + data1 + data2 + "<br/>";
+}
+let data2 = returnluParametreli(" javase", " javaee");
+document.write(data2);
