@@ -257,27 +257,145 @@
 //JS: function
 //Java: Method
 //1
-function returnsuzParametresiz() {
-    document.write("returnsuz Parametresiz<br/>")
-}
-returnsuzParametresiz()
+// function returnsuzParametresiz() {
+//     document.write("returnsuz Parametresiz<br/>")
+// }
+// returnsuzParametresiz()
 
-//2
-function returnsuzParametreli(surname) {
-    document.write("returnsuz Parametreli " + surname + "<br/>")
-}
-returnsuzParametreli("soyadım")
+// //2
+// function returnsuzParametreli(surname) {
+//     document.write("returnsuz Parametreli " + surname + "<br/>")
+// }
+// returnsuzParametreli("soyadım")
 
-//3
-function returnluParametresiz() {
-    return "returnlu Parametresiz<br/>";
-}
-let data = returnluParametresiz();
-document.write(data);
+// //3
+// function returnluParametresiz() {
+//     return "returnlu Parametresiz<br/>";
+// }
+// let data = returnluParametresiz();
+// document.write(data);
 
-//4
-function returnluParametreli(data1, data2) {
-    return "returnlu Parametresiz" + data1 + data2 + "<br/>";
+// //4
+// function returnluParametreli(data1, data2) {
+//     return "returnlu Parametresiz" + data1 + data2 + "<br/>";
+// }
+// let data2 = returnluParametreli(" javase", " javaee");
+// document.write(data2);
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// //Normal Function
+// function normal() {
+//     document.write("Normal Function <br/>")
+// }
+// normal();
+
+// //Anonymous function (ES5)
+// let anonymous = function () {
+//     document.write("Anonymous Function <br/>")
+// }
+// anonymous();
+
+// //Arrow Function (ES6)
+// let arrow = () => {
+//     document.write("Arrow Function <br/>")
+// }
+// arrow();
+
+//////////////////////////////////////////////////////////////////////////////////////
+//Callback function
+// function data1() {
+//     alert("data1")
+// }
+
+// function data2() {
+//     data1()
+// }
+//data2()
+
+// function data1(number) {
+//     alert(Math.pow(number, 2))
+// }
+
+// function data2(callback) {
+//     callback(4)
+// }
+// //data2(data1)//call backfunction  ==> Monad
+
+// //setInterval
+// let sum = () => {
+//     //
+//     setInterval(() => { alert("set Interval last") }, 2000);
+// }
+
+//sum ()
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+let result1 = () => {
+    let number = 5;
+    if (number == 1)
+        document.write("1")
+    else
+        document.write("1 farklıdır")
 }
-let data2 = returnluParametreli(" javase", " javaee");
-document.write(data2);
+//result1()
+
+//Ternary Operators
+let result11 = () => {
+    let number = 1;
+    let result = (number == 1) ? "1" : "1 farklıdır";
+    document.write(result)
+
+}
+result11()
+
+
+let result2 = () => {
+    let number = 15;
+    if (number === 1)
+        document.write("1")
+    else if (number === 2)
+        document.write("2")
+    else if (number === 3)
+        document.write("3")
+    else if (number === 4)
+        document.write("4")
+    else if (number === 5)
+        document.write("5")
+    else
+        document.write("1<=X<=5 dışındadır farklıdır")
+}
+//result2()
+
+let result3 = () => {
+    let number = 2;
+    switch (number) {
+        case 1:
+            document.write("1")
+            break;
+        case 2:
+            document.write("2")
+            break;
+        case 3:
+            document.write("3")
+            break;
+        case 4:
+            document.write("4")
+            break;
+        case 5:
+            document.write("5")
+            break;
+        default:
+            document.write("1<=X<=5 dışındadır farklıdır")
+            break;
+    }
+
+}
+//result3()
+
+
+
+
+
