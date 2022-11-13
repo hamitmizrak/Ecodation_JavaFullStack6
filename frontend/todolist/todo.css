@@ -33,6 +33,14 @@ li{
     overflow: hidden;
 }
 
+.edit_list label{
+ display: none;
+}
+
 
 /* ////////////////////////////////////////////////  */
 /* complete_item */
+#todo_complete label{
+    text-decoration: line-through;
+    color:red;
+}
