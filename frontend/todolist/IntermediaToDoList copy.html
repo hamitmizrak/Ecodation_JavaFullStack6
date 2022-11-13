@@ -15,7 +15,6 @@
 
   <!-- external css -->
   <link rel="stylesheet" href="./todo.css">
-
 </head>
 
 <body>
@@ -24,10 +23,10 @@
     <h1 class="text-primary display-4">Crud Todo List</h1>
     <!-- add item -->
     <section id="add_item">
-      <label for="">Add ITEM</label>
+      <label for="add_input">Add ITEM</label>
       <div class="row">
         <div class="col-md-9">
-          <input type="text" class="form-control" id="todo_task" placeholder="add item ..." autofocus />
+          <input type="text" class="form-control" id="add_input" placeholder="add item ..." autofocus />
         </div>
         <div class="col-md-3">
           <button class="btn btn-primary mt-1">ADD</button>
@@ -39,10 +38,17 @@
     <!-- Todo List -->
     <section id="todo_item">
       <p class="display-6 mt-3 mb-2">Todo List</p>
-      <ul id="todo_incomplete">
+      <ul id="todo_task">
+        <li>
+          <input type="checkbox" class="form-check-input">
+          <label for="">Default Java Öğren</label>
+          <button class="btn btn-warning btn-sm"><i class="fa-solid fa-marker"></i></button>
+          <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+        </li>
+
         <li class="edit_list">
           <input type="checkbox" class="form-check-input">
-          <label for="">Java Öğren</label>
+          <label>Java Öğren</label>
           <button class="btn btn-warning btn-sm"><i class="fa-solid fa-marker"></i></button>
           <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
         </li>
@@ -53,7 +59,7 @@
     <!-- complete_item -->
     <section id="complete_item">
       <p class="display-6 mt-3 mb-2">Complete</p>
-      <ul id="todo_complete">
+      <ul id="complete_list">
         <li>
           <input type="checkbox" class="form-check-input">
           <label for="">Java Öğren</label>
@@ -63,7 +69,6 @@
       </ul>
     </section>
   </div>
-
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
