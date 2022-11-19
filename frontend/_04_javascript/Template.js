@@ -555,7 +555,7 @@ let arrayData3 = () => {
         "surname":"Mızrak",
         "tc_number":112233,
         "isLogin":true,
-        "Java":["javase","javaee","javame"],  
+        "java":["javase","javaee","javame"],  
         "java8":{
             "stream":["forEach","limit","filter"]
         },
@@ -563,13 +563,18 @@ let arrayData3 = () => {
             return `${this.name} ${this.surname}`
         }
     };
-    document.writeln(objectData.name+"<br/>")
-    document.writeln(objectData.isLogin+"<br/>")
-    document.writeln(objectData.tc_number+"<br/>")
-    document.writeln(objectData.Java[1]+"<br/>")
-    document.writeln(objectData.java8.stream[0]  +"<br/>")
-    document.writeln(objectData.fullName() +"<br/>")
+    // document.writeln(`name: ${objectData.name}<br/>`);
+    // document.writeln(objectData.isLogin+"<br/>");
+    // document.writeln(objectData.tc_number+"<br/>");
+    // document.writeln(objectData.java[1]+"<br/>");
+    // document.writeln(objectData.java8.stream[0]  +"<br/>");
+    // document.writeln(objectData.fullName() +"<br/>");
 
+    //for in
+    for(let temp  in objectData)
+    {
+        document.writeln(`${temp}: ${objectData[temp]}  <br/>`);
+    }
 }
 arrayData3 ()
 
