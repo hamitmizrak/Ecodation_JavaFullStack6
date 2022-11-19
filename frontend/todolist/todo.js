@@ -24,21 +24,21 @@ let createNewTask = function (valueData) {
     label.innerText = valueData;
 
     //edit Input Text
-    let editInput=document.createElement("input");
-    editInput.type="text";
+    let editInput = document.createElement("input");
+    editInput.type = "text";
 
     //edit Button
-    let editButton=document.createElement("button");
-    editButton.innerText="Edit";
-    editButton.className="edit";
+    let editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.className = "edit";
 
     //delete Button
-    let deleteButton=document.createElement("button");
-    deleteButton.innerText="Delete";
-    deleteButton.className="delete";
+    let deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.className = "delete";
 
     //append
-    let listItem=document.createElement("li");
+    let listItem = document.createElement("li");
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
@@ -48,34 +48,53 @@ let createNewTask = function (valueData) {
 }
 
 //#### BIND DATA ###
-let bindData=(listItem,checkBoxHandle)=>{
+let bindData = (listItem, checkBoxHandle) => {
 
 }
 
 //#### Task Todo Completed ###
-let taskTodoCompleted=()=>{
+let taskTodoCompleted = () => {
 
 }
 
 //#### ADD #######
-let addTask=()=>{
+let addTask = () => {
     //input içine yazılan veriyi aşağıdaki liste eklemek
-    let listItem=createNewTask(addInput.value);
+    let listItem = createNewTask(addInput.value);
 
     //ul içine list datası eklemek
     todoTask.appendChild(listItem);
 
     //bind
-    bindData(listItem,taskTodoCompleted);
+    bindData(listItem, taskTodoCompleted);
 
     //input verisinin içini boşalttım
-    addInput.value="";
-} 
+    addInput.value = "";
+}
+
+//#### EDIT #######
+let editTask = () => {
+    //bulunduğumuz liste
+    let listItem = this.parentNode;
+
+    let label = listItem.querySelector("label");
+    let editInput = listItem.querySelector("input[type=text]");
+
+    let editListEquals = listItem.classList.contains("edit_list");
+
+    //contitional
+    if (editListEquals)
+        label.innerText = editInput.value;
+    else
+        editInput.value = label.innerText;
+    listItem.classList.toggle("edit_test");
+}
+
 
 //#### DELETE #######
-let deleteTask=()=>{
-    let listItem=this.parentNode;
-    let ulList=listItem.parentNode;
+let deleteTask = () => {
+    let listItem = this.parentNode;
+    let ulList = listItem.parentNode;
     ulList.removeChild(listItem);
 }
 
