@@ -460,6 +460,51 @@ let result7 = () => {
 }
 //result7()
 
+///////////////////////////////////////////////////////////
+//Array
+let arrayData=()=>{
+let dizi=["Ankara",44,true,34.56,"Sivas"];
+// console.log(dizi)
+// console.log(typeof  dizi)
+// console.log(dizi[0].toUpperCase())
+// console.log(dizi[3])
+// console.log(dizi[dizi.length-1])
+
+//1- iterative for
+for (let i = 0; i < dizi.length; i++) {
+///console.log(dizi[i]+" ");
+document.write(dizi[i]+" ");
+}
+
+document.write("###############<br/>");
+
+//2- for in (For Over Index)
+for( let temp in dizi){
+    document.write(temp+"="+dizi[temp]+" ");
+}
+
+document.write("<br/>###############<br/>");
+
+//3- for of (For Over Member)
+for( let temp of dizi){
+    document.write(temp+" ");
+}
+document.write("<br/>###############<br/>");
+
+//4- forEach
+dizi.forEach(function(value){
+    document.write(value+" ");
+})
+
+document.write("<br/>###############<br/>");
+
+//5- forEach
+dizi.forEach(function(value,index,array){
+    document.write(index+" "+value+" ");
+});
+
+}
+arrayData()
 
 
 
