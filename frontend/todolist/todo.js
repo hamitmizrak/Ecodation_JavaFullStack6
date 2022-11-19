@@ -15,7 +15,6 @@ const completeList = document.getElementById("complete_list");
 //#### CREATE #######
 // list item
 let createNewTask = function (valueData) {
-
     //checkbox
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
@@ -48,8 +47,36 @@ let createNewTask = function (valueData) {
     return listItem;
 }
 
+//#### BIND DATA ###
+let bindData=(listItem,checkBoxHandle)=>{
+
+}
+
+//#### Task Todo Completed ###
+let taskTodoCompleted=()=>{
+
+}
+
 //#### ADD #######
+let addTask=()=>{
+    //input içine yazılan veriyi aşağıdaki liste eklemek
+    let listItem=createNewTask(addInput.value);
+
+    //ul içine list datası eklemek
+    todoTask.appendChild(listItem);
+
+    //bind
+    bindData(listItem,taskTodoCompleted);
+
+    //input verisinin içini boşalttım
+    addInput.value="";
+} 
 
 //#### DELETE #######
+let deleteTask=()=>{
+    let listItem=this.parentNode;
+    let ulList=listItem.parentNode;
+    ulList.removeChild(listItem);
+}
 
 //#### COMPLETE #######
