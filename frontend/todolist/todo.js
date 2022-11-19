@@ -47,15 +47,6 @@ let createNewTask = function (valueData) {
     return listItem;
 }
 
-//#### BIND DATA ###
-let bindData = (listItem, checkBoxHandle) => {
-
-}
-
-//#### Task Todo Completed ###
-let taskTodoCompleted = () => {
-
-}
 
 //#### ADD #######
 let addTask = () => {
@@ -98,4 +89,27 @@ let deleteTask = () => {
     ulList.removeChild(listItem);
 }
 
+//#### BIND DATA ###
+let bindData = (listItem, checkBoxHandle) => {
+
+    let checkBoxData = listItem.querySelector("input[type=checkbox]");
+    checkBoxData.onchange = checkBoxHandle;
+
+    let editButtonData = listItem.querySelector("button.edit");
+    editButtonData.onclick = editTask;
+
+    let deleteButtonData = listItem.querySelector("button.delete");
+    deleteButtonData.onclick = deleteTask
+}
+
 //#### COMPLETE #######
+
+//#### Task Todo Completed ###
+let taskTodoCompleted = () => {
+
+}
+
+//Add butonuna tıklandığında
+addButton.onclick = addTask;
+//addButton.addEventListener("click",addTask);
+
