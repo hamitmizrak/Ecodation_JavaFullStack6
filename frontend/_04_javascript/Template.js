@@ -512,6 +512,7 @@
 // ES6(Arrow Function)
 let arrayDataSet = () => {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    arr[1]=22;
     return arr;
 }
 let arrayData2 = () => {
@@ -545,6 +546,31 @@ let arrayData2 = () => {
             document.writeln(value)
         }); //forEach
 }
-arrayData2();
+//arrayData2();
+
+let arrayData3 = () => {
+
+    let objectData={
+        "name":"Hamit",
+        "surname":"Mızrak",
+        "tc_number":112233,
+        "isLogin":true,
+        "Java":["javase","javaee","javame"],  
+        "java8":{
+            "stream":["forEach","limit","filter"]
+        },
+        "fullName":function(){
+            return `${this.name} ${this.surname}`
+        }
+    };
+    document.writeln(objectData.name+"<br/>")
+    document.writeln(objectData.isLogin+"<br/>")
+    document.writeln(objectData.tc_number+"<br/>")
+    document.writeln(objectData.Java[1]+"<br/>")
+    document.writeln(objectData.java8.stream[0]  +"<br/>")
+    document.writeln(objectData.fullName() +"<br/>")
+
+}
+arrayData3 ()
 
 
