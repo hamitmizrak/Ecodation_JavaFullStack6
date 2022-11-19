@@ -1,22 +1,22 @@
-//alert("merhabalar")
+// alert("merhabalar")
 
-//console
-//console.log("console log")
+// console
+// console.log("console log")
 
-//alert
-//alert("deneme1")
-//window.alert("alert1")
+// alert
+// alert("deneme1")
+// window.alert("alert1")
 
-//
-//document.write("document data")
+
+// document.write("document data")
 
 // double quotes: çift tırnak ("")
 // single quotes: tek tırnak ('')
 // backtick : tek tırnak (``)
 
-//var (Global)
-//let(Local) ES6
-//const(Local) ES6
+// var (Global)
+// let(Local) ES6
+// const(Local) ES6
 // var _$degiskenAdi88=44;
 // console.log(_$degiskenAdi88)
 // /*
@@ -48,7 +48,7 @@
 // let data;
 // console.log(data)
 
-//+ - * / % x++ y-- ++X
+// + - * / % x++ y-- ++X
 // let x1=10;
 // const x2=3;
 
@@ -68,13 +68,13 @@
 // console.log(x7);
 
 // kullanıcıdan veri almak
-//NOT: prompt sonucu bir string'tir
-//Eğer bize prompt gelen bir sayı lazım olursa biz bunu cast etmeliyiz
+// NOT: prompt sonucu bir string'tir
+// Eğer bize prompt gelen bir sayı lazım olursa biz bunu cast etmeliyiz
 // let userData=prompt("Lütfen birşeyler yazınız");
 // console.log(userData)
 
-//CAST:
-//String ==> Number
+// CAST:
+// String ==> Number
 // //Number ==> String
 // let value1 = "14";
 // console.log(typeof value1)
@@ -104,11 +104,11 @@
 // console.log("1.satır")
 // console.log("2.satır")
 // console.log("3.satır\n4.satır")
-//escape character ==> \n
+// escape character ==> \n
 
-//break:döngüyü kırmak
-//return:metotu kırmak
-//continue:1 kereye mahsus es geç sonra döngüye devam et
+// break:döngüyü kırmak
+// return:metotu kırmak
+// continue:1 kereye mahsus es geç sonra döngüye devam et
 // console.log(Math.min(2, 9, 8, -1555))
 // console.log(Math.max(2, 9, 8, -1555))
 // console.log(Math.abs(-44))
@@ -125,9 +125,9 @@
 
 // console.log(Math.ceil(Math.random() * 10 + 1))
 
-//////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////
 
-//ÖDEV 1
+// ÖDEV 1
 // Kullanıcıdan aldığımız 2 tane sayıyı toplayan JS algorithm ?
 // 4işlem toplama çıkarma çarpma bölme
 // let number1,number2,sum=0;
@@ -137,7 +137,7 @@
 // console.log(sum);
 
 
-////ÖDEV 2
+// //ÖDEV 2
 // Math Ödev
 // Kullanıcıda tarafından aldığımız 2 tane sayının
 // s1-) Bu sayılardan en küçüğü nedir ?
@@ -147,8 +147,8 @@
 // s5-) Bu sayılardan en küçüğü mutlak değeri nedir ?
 // s6-) Bu sayılardan en küçüğü alt taban en büyüğü üst taban şeklinde üstünü alalım
 
-//////////////////////////////////////////////////////////////////////////////////////
-//SAYI
+// ////////////////////////////////////////////////////////////////////////////////////
+// SAYI
 // let number1 = 14;
 // console.log(typeof number1);
 // //let sayi; :undefined
@@ -178,7 +178,7 @@
 // let hexDecimalNumber = 0xfff;
 // console.log(hexDecimalNumber);
 
-//////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////
 
 // //String
 // let vocabulary = "javame JAvaSCript java JAvaSCript";
@@ -204,15 +204,15 @@
 
 // document.write(vocabulary.charAt(0) + "<br/>");
 
-//ÖRNEK
+// ÖRNEK
 // 1.soru: Kullanıcıdan alınan x ve k değeri için
 // 1.dereceden 2 bilinmeyenli denklem algoritması
 // y=3x+4k;
 // x=5;
 // k=3
 
-//ÖRNEK
-//Kullanıcıdan alınan dereceyi fahranhayt'a değerine çeviren algoritma
+// ÖRNEK
+// Kullanıcıdan alınan dereceyi fahranhayt'a değerine çeviren algoritma
 // 2.soru
 // Dereceyi Fahrenhayt
 // (derece*9/5)+32
@@ -222,10 +222,10 @@
 // document.write(result + "<br/>");
 
 
-//ÖRNEK
-//Kullanıcıdan alınan 1 ve 2.sayı için hesap makinası uygulaması algoritması?
+// ÖRNEK
+// Kullanıcıdan alınan 1 ve 2.sayı için hesap makinası uygulaması algoritması?
 
-//ÖRNEK: Math
+// ÖRNEK: Math
 // Örnek-1 (Hesap Makinesi)
 // kullanıcıdan alınan iki sayının dört işlem (Hesap Makinesi)
 // Scanner, cast
@@ -240,23 +240,23 @@
 
 
 
-//ÖDEV-3
+// ÖDEV-3
 // kullanıcı tarafından girilen bir kelimenin (prompt)
-//S-1) Kaç karakterlidir ?
-//S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
-//S-3) bütün kelimeyi küçük harfle göstermek ?
-//S-4) bütün kelimeyi büyük harfle göstermek ?
-//S-5) ilk harf nedir  ? (charAt)
-//S-6) girdiğiniz kelime java ile başlıyor mu  ?
-//S-7) girdiğiniz kelimenin sonuna "-ben js öğreniyorum"   ?
-//S-8) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin   ?
-//S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
+// S-1) Kaç karakterlidir ?
+// S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
+// S-3) bütün kelimeyi küçük harfle göstermek ?
+// S-4) bütün kelimeyi büyük harfle göstermek ?
+// S-5) ilk harf nedir  ? (charAt)
+// S-6) girdiğiniz kelime java ile başlıyor mu  ?
+// S-7) girdiğiniz kelimenin sonuna "-ben js öğreniyorum"   ?
+// S-8) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin   ?
+// S-9) Kullanıcıdan alınan başka bir kelimeyle birinci olan kelimeyle yer değiştirmek ?
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//JS: function
-//Java: Method
-//1
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// JS: function
+// Java: Method
+// 1
 // function returnsuzParametresiz() {
 //     document.write("returnsuz Parametresiz<br/>")
 // }
@@ -282,7 +282,7 @@
 // let data2 = returnluParametreli(" javase", " javaee");
 // document.write(data2);
 
-//////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////
 
 // //Normal Function
 // function normal() {
@@ -302,8 +302,8 @@
 // }
 // arrow();
 
-//////////////////////////////////////////////////////////////////////////////////////
-//Callback function
+// ////////////////////////////////////////////////////////////////////////////////////
+// Callback function
 // function data1() {
 //     alert("data1")
 // }
@@ -311,7 +311,7 @@
 // function data2() {
 //     data1()
 // }
-//data2()
+// data2()
 
 // function data1(number) {
 //     alert(Math.pow(number, 2))
@@ -328,183 +328,223 @@
 //     setInterval(() => { alert("set Interval last") }, 2000);
 // }
 
-//sum ()
+// sum ()
 
 
-//////////////////////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////////////////////////
 
 // break; döngüyü durdur
 // return function durdurur.
-let result1 = () => {
-    let number = 5;
-    if (number == 1)
-        document.write("1")
-    else
-        document.write("1 farklıdır")
-}
-//result1()
+// let result1 = () => {
+//     let number = 5;
+//     if (number == 1)
+//         document.write("1")
+//     else
+//         document.write("1 farklıdır")
+// }
+// result1()
 
-//Ternary Operators
-let result11 = () => {
-    let number = 1;
-    let result = (number == 1) ? "1" : "1 farklıdır";
-    document.write(result)
+// Ternary Operators
+// let result11 = () => {
+//     let number = 1;
+//     let result = (number == 1) ? "1" : "1 farklıdır";
+//     document.write(result)
 
-}
-//result11()
-
-
-let result2 = () => {
-    let number = 15;
-    if (number === 1)
-        document.write("1")
-    else if (number === 2)
-        document.write("2")
-    else if (number === 3)
-        document.write("3")
-    else if (number === 4)
-        document.write("4")
-    else if (number === 5)
-        document.write("5")
-    else
-        document.write("1<=X<=5 dışındadır farklıdır")
-}
-//result2()
-
-let result3 = () => {
-    let number = 2;
-    switch (number) {
-        case 1:
-            document.write("1")
-            break;
-        case 2:
-            document.write("2")
-            break;
-        case 3:
-            document.write("3")
-            break;
-        case 4:
-            document.write("4")
-            break;
-        case 5:
-            document.write("5")
-            break;
-        default:
-            document.write("1<=X<=5 dışındadır farklıdır")
-            break;
-    }
-
-}
-//result3()
+// }
+// result11()
 
 
+// let result2 = () => {
+//     let number = 15;
+//     if (number === 1)
+//         document.write("1")
+//     else if (number === 2)
+//         document.write("2")
+//     else if (number === 3)
+//         document.write("3")
+//     else if (number === 4)
+//         document.write("4")
+//     else if (number === 5)
+//         document.write("5")
+//     else
+//         document.write("1<=X<=5 dışındadır farklıdır")
+// }
+// result2()
 
-//////////////////////////////////////////////////////////////////////////////////////
+// let result3 = () => {
+//     let number = 2;
+//     switch (number) {
+//         case 1:
+//             document.write("1")
+//             break;
+//         case 2:
+//             document.write("2")
+//             break;
+//         case 3:
+//             document.write("3")
+//             break;
+//         case 4:
+//             document.write("4")
+//             break;
+//         case 5:
+//             document.write("5")
+//             break;
+//         default:
+//             document.write("1<=X<=5 dışındadır farklıdır")
+//             break;
+//     }
 
-let result4 = () => {
-    //For Döngüsü
-    let sum = 0;
-    for (let i = 1; i <= 10; i++) {
-        sum = sum + i;
-    }
-    document.writeln(sum)
-}
-result4()
-
-
-let result5 = () => {
-    //while Döngüsü
-    let sum = 0;
-    let i = 1;
-    while (i <= 10) {
-        sum = sum + i;
-        //i++;
-        //i=i+1;
-        i += 1;
-    }
-    document.writeln(sum)
-}
-//result5()
-
-
-let result6 = () => {
-    //dowhile Döngüsü
-    let sum = 0;
-    let i = 1;
-    do {
-        sum = sum + i;
-        //i++;
-        i = i + 1;
-        //i += 1;
-    }
-    while (i <= 10);
-    document.writeln(sum)
-}
-//result6()
+// }
+// result3()
 
 
-//try-catch
-let result7 = () => {
-    try {
-        alertx("pop-up data")
-           
-    } catch (error) {
-        console.log("Hata mesajı: "+error.message);
-        console.log("Hata mesajı adı: "+error.name);
-        console.log("Hepsi: "+error);
-    }finally{
-     console.log("db.closed: ");
-    }
-    console.log("son satır")
-    throw "Hata var"
-}
-//result7()
 
-///////////////////////////////////////////////////////////
-//Array
-let arrayData=()=>{
-let dizi=["Ankara",44,true,34.56,"Sivas"];
+// ////////////////////////////////////////////////////////////////////////////////////
+
+// let result4 = () => {
+//     For Döngüsü
+//     let sum = 0;
+//     for (let i = 1; i <= 10; i++) {
+//         sum = sum + i;
+//     }
+//     document.writeln(sum)
+// }
+// result4()
+
+
+// let result5 = () => {
+//     while Döngüsü
+//     let sum = 0;
+//     let i = 1;
+//     while (i <= 10) {
+//         sum = sum + i;
+//         i++;
+//         i=i+1;
+//         i += 1;
+//     }
+//     document.writeln(sum)
+// }
+// result5()
+
+
+// let result6 = () => {
+//     dowhile Döngüsü
+//     let sum = 0;
+//     let i = 1;
+//     do {
+//         sum = sum + i;
+//         i++;
+//         i = i + 1;
+//         i += 1;
+//     }
+//     while (i <= 10);
+//     document.writeln(sum)
+// }
+// result6()
+
+
+// try-catch
+// let result7 = () => {
+//     try {
+//         alertx("pop-up data")
+
+//     } catch (error) {
+//         console.log("Hata mesajı: "+error.message);
+//         console.log("Hata mesajı adı: "+error.name);
+//         console.log("Hepsi: "+error);
+//     }finally{
+//      console.log("db.closed: ");
+//     }
+//     console.log("son satır")
+//     throw "Hata var"
+// }
+// result7()
+
+// /////////////////////////////////////////////////////////
+// Array
+// let arrayData=()=>{
+// let dizi=["Ankara",44,true,34.56,"Sivas"];
 // console.log(dizi)
 // console.log(typeof  dizi)
 // console.log(dizi[0].toUpperCase())
 // console.log(dizi[3])
 // console.log(dizi[dizi.length-1])
 
-//1- iterative for
-for (let i = 0; i < dizi.length; i++) {
-///console.log(dizi[i]+" ");
-document.write(dizi[i]+" ");
+// 1- iterative for
+// for (let i = 0; i < dizi.length; i++) {
+// /console.log(dizi[i]+" ");
+// document.write(dizi[i]+" ");
+// }
+
+// document.write("###############<br/>");
+
+// 2- for in (For Over Index)
+// for( let temp in dizi){
+//     document.write(temp+"="+dizi[temp]+" ");
+// }
+
+// document.write("<br/>###############<br/>");
+
+// 3- for of (For Over Member)
+// for( let temp of dizi){
+//     document.write(temp+" ");
+// }
+// document.write("<br/>###############<br/>");
+
+// 4- forEach
+// dizi.forEach(function(value){
+//     document.write(value+" ");
+// })
+
+// document.write("<br/>###############<br/>");
+
+// 5- forEach (ES5)
+// dizi.forEach(function(value,index,array){
+//     document.write(index+"= "+value+", ");
+//     interpolation (ES6)
+//     document.write(`${index} =${value} ,`);
+// });
+
+// }
+// arrayData()
+
+// ES5(Anonymous Function)
+// ES6(Arrow Function)
+let arrayDataSet = () => {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    return arr;
 }
+let arrayData2 = () => {
+    //slice: dizilerde istediğimiz aralığı alır
+    const arrayData = arrayDataSet().slice(0, 7);
+    arrayData.push("sonData");//1 tane sona ekle
+    arrayData.unshift("ilkData");//1 tane başa ekle
+    arrayData.pop();//1 tane son data çıkar
+    arrayData.shift();//1 tane ilk data çıkar
 
-document.write("###############<br/>");
+    arrayData.sort()//küçükten büyüğe
+    //arrayData.sort().reverse()//büyükten küçüğe
 
-//2- for in (For Over Index)
-for( let temp in dizi){
-    document.write(temp+"="+dizi[temp]+" ");
+    //forEach(ES5)
+    arrayData.forEach(function (value) {
+        document.writeln(value)
+    }); //end forEach
+
+    document.writeln("<br/>################<br/>")
+
+    //filter,map,forEach(ES5)
+    arrayData
+        .filter(function (value) {
+            return value % 2 == 0
+        }) //end filter
+        .map(function (value) {
+            //String ,interpolation(ES6)
+            return value.toString().concat(`=çift sayı,`)
+        })
+        .forEach(function (value) {
+            document.writeln(value)
+        }); //forEach
 }
-
-document.write("<br/>###############<br/>");
-
-//3- for of (For Over Member)
-for( let temp of dizi){
-    document.write(temp+" ");
-}
-document.write("<br/>###############<br/>");
-
-//4- forEach
-dizi.forEach(function(value){
-    document.write(value+" ");
-})
-
-document.write("<br/>###############<br/>");
-
-//5- forEach
-dizi.forEach(function(value,index,array){
-    document.write(index+" "+value+" ");
-});
-
-}
-arrayData()
-
+arrayData2();
 
 
