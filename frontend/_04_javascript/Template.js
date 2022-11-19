@@ -575,6 +575,12 @@ let arrayData3 = () => {
     {
         document.writeln(`${temp}: ${objectData[temp]}  <br/>`);
     }
+
+    //JSON.stringify, JSON.parse
+    const objectToString=JSON.stringify(objectData);
+    const stringTcNumber=JSON.parse(objectToString).tc_number;
+    document.writeln(`name: ${stringTcNumber}<br/>`);
+
 }
 arrayData3 ()
 
