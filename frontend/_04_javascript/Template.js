@@ -570,7 +570,7 @@ let arrayData3 = () => {
     // document.writeln(objectData.java8.stream[0]  +"<br/>");
     // document.writeln(objectData.fullName() +"<br/>");
 
-    //for in
+    //Object forIn
     for(let temp  in objectData)
     {
         document.writeln(`${temp}: ${objectData[temp]}  <br/>`);
