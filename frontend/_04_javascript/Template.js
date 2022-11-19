@@ -512,7 +512,7 @@
 // ES6(Arrow Function)
 let arrayDataSet = () => {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    arr[1]=22;
+    arr[1] = 22;
     return arr;
 }
 let arrayData2 = () => {
@@ -548,18 +548,39 @@ let arrayData2 = () => {
 }
 //arrayData2();
 
+let localGlobal = () => {
+    //global
+    var global = "Merhabalar1";
+    var global = "Merhabalar2";
+    document.writeln(`var: ${global}<br/>`);
+
+    //let const aynı isimde kullanamam
+    let local = "Merhabalar3";
+    document.writeln(`let: ${local}<br/>`);
+    //let local="Merhabalar3"; ==> kullanamayız.
+    local = "Merhabalar4";
+    document.writeln(`let: ${local}<br/>`);
+
+    const local2 = "Merhabalar5";
+    document.writeln(`const: ${local2}<br/>`);
+    //Uncaught TypeError: Assignment to constant variable.
+    local2 = "Merhabalar6";
+    document.writeln(`const: ${local2}<br/>`);
+}
+//localGlobal()
+
 let arrayData3 = () => {
 
-    let objectData={
-        "name":"Hamit",
-        "surname":"Mızrak",
-        "tc_number":112233,
-        "isLogin":true,
-        "java":["javase","javaee","javame"],  
-        "java8":{
-            "stream":["forEach","limit","filter"]
+    let objectData = {
+        "name": "Hamit",
+        "surname": "Mızrak",
+        "tc_number": 112233,
+        "isLogin": true,
+        "java": ["javase", "javaee", "javame"],
+        "java8": {
+            "stream": ["forEach", "limit", "filter"]
         },
-        "fullName":function(){
+        "fullName": function () {
             return `${this.name} ${this.surname}`
         }
     };
@@ -571,17 +592,20 @@ let arrayData3 = () => {
     // document.writeln(objectData.fullName() +"<br/>");
 
     //Object forIn
-    for(let temp  in objectData)
-    {
+    for (let temp in objectData) {
         document.writeln(`${temp}: ${objectData[temp]}  <br/>`);
     }
 
     //JSON.stringify, JSON.parse
-    const objectToString=JSON.stringify(objectData);
-    const stringTcNumber=JSON.parse(objectToString).tc_number;
+    const objectToString = JSON.stringify(objectData);
+    const stringTcNumber = JSON.parse(objectToString).tc_number;
     document.writeln(`name: ${stringTcNumber}<br/>`);
 
 }
 arrayData3 ()
+
+
+
+
 
 
