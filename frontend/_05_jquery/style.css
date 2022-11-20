@@ -7,3 +7,11 @@
      width:8%;
      height: 2rem;
 }
+
+#check_id{
+    position:absolute;
+    right: 0;
+    width: 7%;
+    height: 1.3rem;
+    margin-right:1rem;
+}
