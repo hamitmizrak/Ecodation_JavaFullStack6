@@ -39,10 +39,25 @@ $(document).ready(function () {
 // STEP-2
 // listede 2 kere tıkladığımızda tıkladığımız liste silinsin.
 $(document).ready(function () {
-    $("#button_input_val").click(() => {
+    //button
+    const buttonInputVal = $("#button_input_val");
+    const buttonInputCss = {
+        width: "3.5%",
+        height: "2rem",
+        opacity: ".8"
+    };
+    const MS = 3000;
+    buttonInputVal.click(() => {
+        buttonInputVal.animate(buttonInputCss, MS, () => {
+            alert("tamamlandı...")
+        });
+
+        //input
         let value = $("#input_data").val();
+        const inputFormCheck = '<input class="form-check-input" type="checkbox" id="check_id"></li>';
         $("#ul_data")
-            .append(`<li class="list-group-item">${value}<input class="form-check-input" type="checkbox" id="check_id"></li>`);
+            .append(`<li class="list-group-item">
+                ${value} ${inputFormCheck}`);
 
         //1 kere tıklandığında
         $("#ul_data li ").click(function () {
@@ -57,7 +72,6 @@ $(document).ready(function () {
         //2 kere tıkladığımızda
         $("#ul_data li").dblclick(function () {
             $(this).hide();
-        })
-
-    });
-});
+        })//end dblclick
+    }); //end buttonInputVal
+}); //end $(document).ready
