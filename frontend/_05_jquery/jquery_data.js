@@ -1,20 +1,18 @@
 
 // ister $ ister jQuery
 $(document).ready(function () {
-
     //h2 tag
-    $("h2").mouseover(function(){
-        $("#parag_id").css("color", "white").css("backgroundColor","black");
+    $("h2").mouseover(function () {
+        $("#parag_id").css("color", "white").css("backgroundColor", "black");
     })
-
 
     //double click Hide
     $("#button_id_dblclick_hide").dblclick(function () {
         jQuery("#parag_id").hide();
     });
 
-    $("#button_id_dblclick_show").mouseover(function(){
-        $("#parag_id").show();
+    $("#button_id_dblclick_show").mouseover(function () {
+        $("#parag_id").show(2000);
     })
 
     //click event
@@ -30,6 +28,12 @@ $(document).ready(function () {
             .html("html data")
             .css("color", "white").css(jqueryObject);
     });
+});
 
 
+$(document).ready(function () {
+    $("#button_input_val").click(() => {
+        let value = $("#input_data").val();
+        $("#second_id").html(value);
+    });
 });
