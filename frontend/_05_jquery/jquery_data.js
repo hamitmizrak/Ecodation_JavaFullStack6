@@ -34,6 +34,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#button_input_val").click(() => {
         let value = $("#input_data").val();
-        $("#second_id").html(value);
+        $("#ul_data").append(`<li class="list-group-item">${value}</li>`);
+        // $("#ul_data").html(value);
+        // <li class="list-group-item"></li>
     });
 });
