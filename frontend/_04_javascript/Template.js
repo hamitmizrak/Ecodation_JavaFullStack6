@@ -602,7 +602,7 @@ let arrayData3 = () => {
     document.writeln(`name: ${stringTcNumber}<br/>`);
 
 }
-arrayData3 ()
+arrayData3()
 
 
 
