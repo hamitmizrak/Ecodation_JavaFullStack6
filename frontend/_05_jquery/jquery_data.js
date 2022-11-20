@@ -30,12 +30,24 @@ $(document).ready(function () {
     });
 });
 
+// listeye eklenen checkbox check yaparsak üstünü çizsin 
+// chechk kaldırırsak üstünü çizdemen görünsün
 
+// listede 2 kere tıkladığımızda tıkladığımız liste silinsin.
 $(document).ready(function () {
     $("#button_input_val").click(() => {
         let value = $("#input_data").val();
-        $("#ul_data").append(`<li class="list-group-item">${value}</li>`);
-        // $("#ul_data").html(value);
-        // <li class="list-group-item"></li>
+        $("#ul_data")
+            .append(`<li class="list-group-item">${value}</li>`);
+
+        //1 kere tıklandığında
+        $("#ul_data li").click(function () {
+            $(this).css("text-decoration", "line-through");
+        });
+
+        $("#ul_data li").dblclick(function () {
+            $(this).hide();
+        })
+
     });
 });
