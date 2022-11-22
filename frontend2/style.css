@@ -1,38 +1,98 @@
 /*
-project 
-    - name        : My CV sites
-    - create date : 22 November 2022
-    - author By   : Hamit Mızrak
-    - version     : v.1
+    project
+        - name        : My CV sites
+        - create date : 22 November 2022
+        - author By   : Hamit Mızrak
+        - version     : v.1
 */
 
 /* ####################################### */
-/* Common Property */
 /* base configuration */
 /* root: sürekli kullancağımız tag için burada değişken adı olarak kullanmak */
-:root{
+:root {
     --template-bg: #f2f2f2 !important;
     --template-color: #302f2f !important;
     --max-width: 1100px;
 }
 
-*{
-    margin:0;
+/* ####################################### */
+/* Common Property */
+* {
+    margin: 0;
     padding: 0px;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 15px;
+    transition: 1s all;
 }
 
-body{
+body {
     font-family: 'Hind', sans-serif;
-    font-size:1.1rem;
+    font-size: 1.1rem;
     background-color: var(--template-bg);
-    color:var(--template-color);
+    color: var(--template-color);
     line-height: 1.5;
     position: relative;
 }
 
+a {
+    text-decoration: none;
+}
 
-/*  */
+
+ul {
+    list-style-type: none;
+}
+
+p {
+    text-align: center;
+    margin: .5rem 1rem;
+}
+
+i {
+    font-size: 1rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover{
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.9);
+    cursor: pointer;
+}
+
+/* ####################################### */
+/* line-clamp */
+
+.line-clamp4{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp6{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp7{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp8{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
