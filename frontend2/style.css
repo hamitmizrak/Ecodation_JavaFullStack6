@@ -120,3 +120,14 @@ img:hover {
     color: var(--template-bg);
     background-color: var(--template-color);
 }
+
+/* ####################################### */
+/* header */
+header{
+    background-image: url(./images/header.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index:-1;
+    height:110vh;
+    padding-top:16rem;
+}
