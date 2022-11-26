@@ -44,7 +44,7 @@ const registerValidation = () => {
         } else if (regexPassword(password) == false) {
             $("#validation_password").html("Uygun formatta şifre girilmedi");
         }
-        function regexPassword (password) {
+        function regexPassword(password) {
             const regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
             return regex.test(password);
         }
@@ -65,5 +65,9 @@ const registerValidation = () => {
 }
 registerValidation()
 
+
+// Footer Date
+const date_now = new Date().getFullYear();
+$("#copy_date").html(date_now)
 
 
