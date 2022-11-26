@@ -1,4 +1,4 @@
-
+// #### NAVBAR  ##########################
 // auto Complete
 const autoComplete = () => {
     let search_array = ["action", "blog", "class", "define", "java", "javacript"];
@@ -65,9 +65,24 @@ const registerValidation = () => {
 }
 registerValidation()
 
-
+// ######################################################
 // Footer Date
 const date_now = new Date().getFullYear();
 $("#copy_date").html(date_now)
 
+
+// #### BACK TO TOP  ##########################
+// Yukarıda kaybolsun aşağıda gösterilsin
+$(window).scroll(function(){
+if($(this).scrollTop()>100){
+    $("#back_top").fadeIn('slow')
+}else{
+    $("#back_top").fadeOut('slow')
+}
+}); //end window
+$("#back_top").click(()=>{
+$('html,body').animate(
+    { scrollTop:0},100,'easeInOutExpo');
+    return false;
+});
 
