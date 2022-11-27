@@ -38,8 +38,11 @@ sudo apt-get update && apt-get upgrade -y
 
 <!--
 sudo apt-get upgrade -y
+
+sudo apt-get install -f
 sudo apt-get install curl
 sudo apt-get install vim
+sudo apt-get install wget
 sudo apt-get install zip -y
 curl google.com
 ping google.com
@@ -75,11 +78,55 @@ rm -rf dizinAdi
 
 cat >> info.txt
 cat info.txt (sadece okuma)
+tac info.txt (sadece okuma tersten okuma)
 vim info.txt
+vi info.txt
+nano info.txt
 i
 esc
 :wq (kaydet çıkış yap)
 :q! (kaydetmeden çıkış yap)
+grep kelime info.txt
+head -n 5 info.txt
+tail -n 5 info.txt
+-->
+
+<!--
+r=4
+w=2
+x=1
+
+d=
+rwx=4+2+1=7
+r-x=4+0+1=5
+r-x=4+0+1=5
+chmod 755 info.txt
+
+su: switch user
+df: disk alanaı
+lshw -short
+cat /proc/cpuinfo
+free -m
+
+//Dikkat: root yetkilendirmeye sahip kişi olmamız gerekiyor.
+sudo su
+useradd java44
+password java44
+
+usermod -L java44 (kullanıcı pasif hale getirmek)
+usermod -U java44 (kullanıcı aktif hale getirmek)
+
+uptime
+du
+apt install ncal
+cal 2022
+ps
+shred info.txt
+
+reboot
+shutdown
+
+apt install net-tools
 -->
 </body>
 </html>
