@@ -9,6 +9,8 @@
 </head>
 <body>
 <!--
+git config --global user.name
+git config --global user.email
 git init
 
 git status
@@ -16,6 +18,27 @@ git log
 
 git add .
 git commit -m "1.commit"
+git push -u
+
+git commit -a -m "2.commit"
+
+git remote -v
+git clone githubURL
+
+cat >> .gitignore
+secret.txt
+
+git stash
+git stash list
+git stash apply stash@{0}
+git stash drop  stash@{0}
+
+alias
+git config --global -l
+git log --all --graph --decorate --oneline
+git config --global alias.copy1 "log --all --graph --decorate --oneline"
+git copy1
+
 
 -->
 </body>
