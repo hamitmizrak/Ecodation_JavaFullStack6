@@ -9,6 +9,11 @@
 </head>
 <body>
 <!--
+GIT: Global Information Tracked
+GİT VCS
+açık kaynak koldudur.
+Ücretsiz
+
 git config --global user.name
 git config --global user.email
 git init
@@ -25,6 +30,7 @@ git commit -a -m "2.commit"
 git remote -v
 git clone githubURL
 
+https://github.com/github/gitignore
 cat >> .gitignore
 secret.txt
 
@@ -39,6 +45,27 @@ git log --all --graph --decorate --oneline
 git config --global alias.copy1 "log --all --graph --decorate --oneline"
 git copy1
 
+git branch -M main
+git branch
+git branch frontend
+git checkout frontend
+mkdir frontend
+cat >> index.html
+git add .
+git commit -m "frontend commit"
+git checkout master
+git branch -D branchAdi
+
+git checkout -b database
+
+git branch backend
+git checkout backend
+git checkout master
+
+
+git checkout master
+git merge backend
+git merge --no-ff frontend
 
 -->
 </body>
