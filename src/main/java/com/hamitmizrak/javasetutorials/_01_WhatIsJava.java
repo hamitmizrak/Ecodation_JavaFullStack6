@@ -44,7 +44,23 @@ public class _01_WhatIsJava {
         // karakter
         char c4='@';
 
+        ///////////////////////////////////////////////////////////////
         //wrapper type
+        Byte wrapperb1=new Byte((byte) 125);
+        Short wrappers1=130;
+        Integer wrapperi1=1551511111;
+        Long wrapperl1=15515111111L;
+
+        // virgüllü sayı
+        Float wrapperf2=1515.45f;
+        Double wrapperd2=15511515.4545445;
+
+        // boolean
+        Boolean wrapperb3=false;
+
+        // karakter
+        Character wrapperc4='@';
+
 
     }
 }
