@@ -3,6 +3,17 @@ package com.hamitmizrak.javasetutorials;
 public class _09_StringSum {
 
     public static void main(String[] args) {
+        //Kullanıcıdan alacağımız 3 tane veriyi birleştirelim ?
+        //Harf sayısı karakter sayısı(length())
+        //Başında ve sonunda trimlendimş harf sayısı(trim)
+        //J ile başlıyor mu ?(starsWtith())
+        //J ile bitiyor mu ? (endsWith())
+        //Hepsini BÜYÜK harf yapalım ? (toUppercase())
+        //Hepsini küçük harf yapalım ? (toLowerCase())
+        //elde ettiğimiz veriye sonuna java ekliyelim )(concat)
+        //bu veri boş mu dolumu ?
+        //bu veriyle "merhabalar ben java öğreniyorum" kelimesiyle değiştirelim.
+
 
         //Birleştirme
         String str1="javase";

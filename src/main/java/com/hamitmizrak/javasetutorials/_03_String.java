@@ -19,5 +19,8 @@ public class _03_String {
         System.out.println("var mı? "+vocabulary.contains("öğreniyorum"));
         System.out.println("boş mı? "+vocabulary.isEmpty());
         System.out.println(vocabulary.equals("farklı alan"));
+
+        System.out.println(vocabulary.substring(1));
+        System.out.println(vocabulary.substring(1,4)); //1<=X<=4-1
     }
 }
