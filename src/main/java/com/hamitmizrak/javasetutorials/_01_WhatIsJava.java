@@ -60,7 +60,5 @@ public class _01_WhatIsJava {
 
         // karakter
         Character wrapperc4='@';
-
-
     }
 }
