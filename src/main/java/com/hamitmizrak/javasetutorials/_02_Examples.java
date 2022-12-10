@@ -21,7 +21,6 @@ public class _02_Examples {
         fahrenhayt= degree * 9 / 5 + 32;
         System.out.println("Fahrenhayt: "+fahrenhayt+"\n");
 
-
         // 3.soru iki sayıda dört işlem
         // x1=4,x2=2;
         int number1,number2;
@@ -41,6 +40,5 @@ public class _02_Examples {
         double weight = 92, height = 181,vki;
         vki=weight/height*height;
         System.out.println("VKI: "+vki+"\n");
-
     }
 }
