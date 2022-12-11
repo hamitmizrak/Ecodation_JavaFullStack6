@@ -1,10 +1,45 @@
 package com.hamitmizrak.javasetutorials;
 
-public class _12_Examples {
-    public static void main(String[] args) {
-        // Kullanıcı tarafından girilen haftanın gününü bulan algoritma Scanner,Swich ?
-        // Rastgele 5 tane sayının toplamı , çift sayı adedi,çift sayı toplamı ?
+import java.util.Scanner;
 
+public class _12_Examples {
+    // Kullanıcı tarafından girilen haftanın gününü bulan algoritma Scanner,Swich ?
+    public static void weekDayInUserData() {
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("Lütfen hafta günü giriniz");
+        String weekDay = klavye.nextLine().toLowerCase();
+        switch (weekDay) {
+            case "pazartesi":
+                System.out.println("Pazartesi");
+                break;
+            case "sali":
+                System.out.println("sali");
+                break;
+            case "carsamba":
+                System.out.println("carsamba");
+                break;
+            case "persembe":
+                System.out.println("persembe");
+                break;
+            case "cuma":
+                System.out.println("cuma");
+                break;
+            case "cumartesi":
+                System.out.println("cumartesi");
+                break;
+            case "pazar":
+                System.out.println("pazar");
+                break;
+            default:
+                System.out.println("Lütfen günleri girelim");
+                break;
+        }
+    }
+
+    public static void main(String[] args) {
+        weekDayInUserData();
+
+        // Rastgele 5 tane sayının toplamı , çift sayı adedi,çift sayı toplamı ?
 
 
         // Vize Final Ödevi
