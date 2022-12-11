@@ -1,5 +1,6 @@
 package com.hamitmizrak.javasetutorials;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class _12_Examples {
@@ -36,10 +37,33 @@ public class _12_Examples {
         }
     }
 
-    public static void main(String[] args) {
-        weekDayInUserData();
+    // Rastgele 5 tane sayının toplamı ,sayılar, kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
+    // Exception Handling
+    public static void numberResult(){
+        int  sum=0,counter=0, evenCounter=0,evenSum=0;
+        int commonNumberSum=0;
+        String number="";
+        for (int i = 1; i <=5 ; i++) {
+            Random random=new Random();
+            int numberRandom=random.nextInt(9)+1;
+            number=number+numberRandom+" ";
+            counter++;
+            if(numberRandom%2==0){
+                evenCounter++;
+                evenSum+=numberRandom;
+            }
+            commonNumberSum+=numberRandom;
+        }
+        System.out.println(number);
+        System.out.println("Sayı adedi: "+counter+" Bütün sayı toplamları: "+commonNumberSum);
+        System.out.println("Çift Sayı adedi: "+evenCounter+" Çift sayı toplamı: "+evenSum);
+    }
 
-        // Rastgele 5 tane sayının toplamı , kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
+    public static void main(String[] args) {
+       // weekDayInUserData();
+        numberResult();
+
+
 
 
         // Vize Final Ödevi
