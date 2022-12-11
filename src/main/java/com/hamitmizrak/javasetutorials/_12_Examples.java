@@ -42,6 +42,28 @@ public class _12_Examples {
 
     // Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
     // 4!=4*3*2*1=24
+    public static void userDataFactoriyel() {
+        Scanner klavye = new Scanner(System.in);
+        int facNumber = 1;
+       /* while(true){}
+        for(;;){}*/
+        while (true) {
+            System.out.println("\nLütfen bir sayı giriniz");
+            int number = klavye.nextInt();
+            if (number < 0) {
+                System.out.println("Sıfırdan küçük sayı girmeyiniz");
+                userDataFactoriyel();
+            } else if (number == 1 || number == 0) {
+                System.out.println("O veya 1 faktöriyel sonuçu: 1");
+            } else {
+                for (int i = number; i > 0; i--) {
+                    facNumber *= i;
+                }
+                System.out.println(number + " sayısının faktöriyeli: " + facNumber);
+                facNumber = 1;
+            }
+        }
+    }
 
     // Kullanıcıdan alınan bir sayı asal olup olmadığını bulan algoritma ?
     // Asal sayı: sadece 1 ve kendisine bölünebilen sayılardır. 5=1,5(Asal)   50=1,2,5,10,25,50(Asal değildir)
@@ -68,8 +90,8 @@ public class _12_Examples {
 
     public static void main(String[] args) {
         // weekDayInUserData();
-        numberResult();
-
+        //numberResult();
+        userDataFactoriyel();
 
         // Vize Final Ödevi
         // kullanıcıdan alınan vize ve final notuna göre geçme(ortalama) Algoritması
@@ -86,6 +108,8 @@ public class _12_Examples {
         // Dikkat: Consolda virgül kullanmalısın.
         // while sonsuz döngü   ==> while(true) {}
         // for sonsuz döngü     ==> for(;;) {}
+
+        //faktöriyel recursive olarak algoritmasını yapalım ?
 
     }
 }
