@@ -39,6 +39,10 @@ public class _12_Examples {
 
     // Rastgele 5 tane sayının toplamı ,sayılar, kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
     // Exception Handling
+
+    //Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
+    //Kullanıcıdan alınan bir sayı asal olup olmadığını bulan algoritma ?
+
     public static void numberResult(){
         int  sum=0,counter=0, evenCounter=0,evenSum=0;
         int commonNumberSum=0;
