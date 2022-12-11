@@ -39,7 +39,7 @@ public class _12_Examples {
     public static void main(String[] args) {
         weekDayInUserData();
 
-        // Rastgele 5 tane sayının toplamı , çift sayı adedi,çift sayı toplamı ?
+        // Rastgele 5 tane sayının toplamı , kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
 
 
         // Vize Final Ödevi
