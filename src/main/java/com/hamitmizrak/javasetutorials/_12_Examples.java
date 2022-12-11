@@ -40,6 +40,27 @@ public class _12_Examples {
     // Rastgele 5 tane sayının toplamı ,sayılar, kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
     // Exception Handling
 
+    public static void numberResult() {
+        int sum = 0, counter = 0, evenCounter = 0, evenSum = 0;
+        int commonNumberSum = 0;
+        String number = "";
+        for (int i = 1; i <= 5; i++) {
+            Random random = new Random();
+            int numberRandom = random.nextInt(9) + 1;
+            number = number + numberRandom + " ";
+            counter++;
+            if (numberRandom % 2 == 0) {
+                evenCounter++;
+                evenSum += numberRandom;
+            }
+            commonNumberSum += numberRandom;
+        }
+        System.out.println(number);
+        System.out.println("Sayı adedi: " + counter + " Bütün sayı toplamları: " + commonNumberSum);
+        System.out.println("Çift Sayı adedi: " + evenCounter + " Çift sayı toplamı: " + evenSum);
+    }
+
+
     // Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
     // 4!=4*3*2*1=24
     public static void userDataFactoriyel() {
@@ -68,30 +89,43 @@ public class _12_Examples {
     // Kullanıcıdan alınan bir sayı asal olup olmadığını bulan algoritma ?
     // Asal sayı: sadece 1 ve kendisine bölünebilen sayılardır. 5=1,5(Asal)   50=1,2,5,10,25,50(Asal değildir)
 
-    public static void numberResult() {
-        int sum = 0, counter = 0, evenCounter = 0, evenSum = 0;
-        int commonNumberSum = 0;
-        String number = "";
-        for (int i = 1; i <= 5; i++) {
-            Random random = new Random();
-            int numberRandom = random.nextInt(9) + 1;
-            number = number + numberRandom + " ";
-            counter++;
-            if (numberRandom % 2 == 0) {
-                evenCounter++;
-                evenSum += numberRandom;
+    //örnek: 6 asal sayı değildir(1/2/3/6)
+    //En küçük ve tek çift sayı 2'dir
+    public static boolean isPrime() {
+        Scanner klavye = new Scanner(System.in);
+        System.out.println("\nLütfen bir sayı giriniz");
+        int number = klavye.nextInt();
+        boolean isAsal = true;
+
+        if (number <= 1) {
+            System.out.println("2 Küçük asal sayı olamaz");
+        } else {
+            // 2 3 5 7 11 13 17 19 ... =Asal sayılardır
+            //Sayı 2'e bölünüyorsa asal sayı değildir.
+            //eğer sayı döngüde bir sayıya bölünüyorsa asal sayı değildir
+            for (int i = 2; i < number; i++) {
+                if (number % i == 0)
+                    isAsal = false;
             }
-            commonNumberSum += numberRandom;
+            if (isAsal) {
+                System.out.println(number + " sayısı Asal Sayıdır.");
+            } else {
+                System.out.println(number + " sayısı Asal Sayı Değildir");
+            }
         }
-        System.out.println(number);
-        System.out.println("Sayı adedi: " + counter + " Bütün sayı toplamları: " + commonNumberSum);
-        System.out.println("Çift Sayı adedi: " + evenCounter + " Çift sayı toplamı: " + evenSum);
+        return isAsal;
     }
 
     public static void main(String[] args) {
-        // weekDayInUserData();
-        //numberResult();
-        userDataFactoriyel();
+        for (; ; ) {
+            // weekDayInUserData();
+            //numberResult();
+            //userDataFactoriyel();
+
+            boolean resutData = isPrime();
+            System.out.println(resutData);
+        }
+
 
         // Vize Final Ödevi
         // kullanıcıdan alınan vize ve final notuna göre geçme(ortalama) Algoritması
