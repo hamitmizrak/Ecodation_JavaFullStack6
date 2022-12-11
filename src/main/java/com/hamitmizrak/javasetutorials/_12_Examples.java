@@ -40,34 +40,35 @@ public class _12_Examples {
     // Rastgele 5 tane sayının toplamı ,sayılar, kaçtane sayıvar ,kaç tane çift sayı var,çift sayı toplamı ?
     // Exception Handling
 
-    //Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
-    //Kullanıcıdan alınan bir sayı asal olup olmadığını bulan algoritma ?
+    // Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
+    // 4!=4*3*2*1=24
 
-    public static void numberResult(){
-        int  sum=0,counter=0, evenCounter=0,evenSum=0;
-        int commonNumberSum=0;
-        String number="";
-        for (int i = 1; i <=5 ; i++) {
-            Random random=new Random();
-            int numberRandom=random.nextInt(9)+1;
-            number=number+numberRandom+" ";
+    // Kullanıcıdan alınan bir sayı asal olup olmadığını bulan algoritma ?
+    // Asal sayı: sadece 1 ve kendisine bölünebilen sayılardır. 5=1,5(Asal)   50=1,2,5,10,25,50(Asal değildir)
+
+    public static void numberResult() {
+        int sum = 0, counter = 0, evenCounter = 0, evenSum = 0;
+        int commonNumberSum = 0;
+        String number = "";
+        for (int i = 1; i <= 5; i++) {
+            Random random = new Random();
+            int numberRandom = random.nextInt(9) + 1;
+            number = number + numberRandom + " ";
             counter++;
-            if(numberRandom%2==0){
+            if (numberRandom % 2 == 0) {
                 evenCounter++;
-                evenSum+=numberRandom;
+                evenSum += numberRandom;
             }
-            commonNumberSum+=numberRandom;
+            commonNumberSum += numberRandom;
         }
         System.out.println(number);
-        System.out.println("Sayı adedi: "+counter+" Bütün sayı toplamları: "+commonNumberSum);
-        System.out.println("Çift Sayı adedi: "+evenCounter+" Çift sayı toplamı: "+evenSum);
+        System.out.println("Sayı adedi: " + counter + " Bütün sayı toplamları: " + commonNumberSum);
+        System.out.println("Çift Sayı adedi: " + evenCounter + " Çift sayı toplamı: " + evenSum);
     }
 
     public static void main(String[] args) {
-       // weekDayInUserData();
+        // weekDayInUserData();
         numberResult();
-
-
 
 
         // Vize Final Ödevi
