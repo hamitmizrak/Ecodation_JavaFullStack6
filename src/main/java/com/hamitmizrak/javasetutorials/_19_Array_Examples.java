@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 // ödev:
 /*
-4 X 4 matrix olsun
-isminizin ilk harfi diagonal altında olacak şekilde
-isminizin son harfi diagonal üstünde olacak şekilde
-ismimizin orta harfi diagonal olacak şekilde  TEKSE: (n+1)/2
+3 X 3 matrix olsun
+isminizin ilk harfi diagonal üstünde olacak şekilde (i<j)
+isminizin son harfi diagonal altında olacak şekilde (i>j)
+ismimizin orta harfi diagonal olacak şekilde  TEKSE: (n+1)/2 (i==j)
 */
 public class _19_Array_Examples {
 
@@ -29,24 +29,38 @@ public class _19_Array_Examples {
         return arr;
     }
 
-    public static void showScreenArray() {
+    public static char[][] showScreenArray() {
         char[] arr = matrixMyNameLetter();
-        int[][] matrix = new int[3][3];
+        char[][] matrix = new char[3][3];
         for (int i = 0; i < matrix.length; i++) {//satır
             for (int j = 0; j < matrix[i].length; j++) {//sutun
-                /*if (i > j) {
-
+                if (i > j) {
+                    matrix[i][j] = arr[2];
                 } else if (i < j) {
-
+                    matrix[i][j] =arr[0];
                 } else {
+                    matrix[i][j] =arr[1];;
+                }
+            } //end columns
+            System.out.println();
+        }//end rows
+        return matrix;
+    }
 
-                }*/
+    public static void showingMatrixData(){
+        char[][] matrix = new char[3][3];
+        matrix=showScreenArray();
+        //showing
+        for (int i = 0; i < matrix.length; i++) {//satır
+            for (int j = 0; j < matrix[i].length; j++) {//sutun
+                System.out.print(matrix[i][j]+" ");
             }
             System.out.println();
         }
     }
 
     public static void main(String[] args) {
-        matrixMyNameLetter();
+        //Monad
+        showingMatrixData();
     }
 }
