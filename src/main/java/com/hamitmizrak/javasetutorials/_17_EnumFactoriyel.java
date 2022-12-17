@@ -1,6 +1,7 @@
 package com.hamitmizrak.javasetutorials;
 
 import javax.swing.*;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public enum _17_EnumFactoriyel {
@@ -15,6 +16,7 @@ class RecursiveIterativeMethod {
 
     //userDate
     public static int userData() throws MySpecialException {
+        System.out.println("Lütfen pop-up bakınız");
         int number= Integer.valueOf(JOptionPane.showInputDialog("Lütfen faktoriyel hesap için bir sayı giriniz"))  ;
         if (number < 0) {
             System.out.println("Sıfırdan küçük sayı giremezsiniz");
@@ -28,9 +30,8 @@ class RecursiveIterativeMethod {
         return number;
     }
 
-    //chooise
-    public static void chooise() throws MySpecialException {
-        //InputMismatchException:  Character.isLetter,isDigit
+    //integer validation must have been
+    public static int validationUser(){
         String iterative=_17_EnumFactoriyel.ITERATIVE.toString();
         String recursive=_17_EnumFactoriyel.RECURSIVE.toString();
         String allData="\nLütfen bir seçim yapınız."
@@ -40,7 +41,34 @@ class RecursiveIterativeMethod {
                 .concat(recursive)
                 .concat("\n3-)Exit");
         System.out.println(allData);
-        int user = scanner.nextInt();
+
+        //InputMismatchException:  Character.isLetter,isDigit
+        char user='\u0000';
+        int number = 0;
+        try {
+             user = scanner.nextLine().charAt(0);
+            if(Character.isDigit(user)){
+                System.out.println("Girdiğiniz sayıdır");
+                //char to Integer cast
+                number=Character.getNumericValue(user);
+            }else if(Character.isLetter(user)){
+                System.out.println("Girdiğiniz harftir lütfen sayı giriniz");
+                validationUser();
+            }else{
+                System.out.println("Girdiğiniz özel simgedir lütfen sayı giriniz");
+                validationUser();
+            }
+        }catch (InputMismatchException inputMismatchException){
+            inputMismatchException.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return number;
+    }
+
+    //chooise
+    public static void chooise() throws MySpecialException {
+        int user = validationUser();
         switch (user) {
             case 1:
                 int numberFactoriyel = userData();
@@ -64,7 +92,7 @@ class RecursiveIterativeMethod {
         }
     }
 
-    //iterative
+    //iterative factoriyel
     public static void iterativeFactoriyel(int number) throws MySpecialException {
         int result = 1;
         for (int i = number; i > 0; i--) {
@@ -73,7 +101,7 @@ class RecursiveIterativeMethod {
         System.out.println(number + " sayısınının factoriyeli: " + result);
     }
 
-    //recursive
+    //recursive factoriyel
     public static int recursiveFactoriyel(int number) throws MySpecialException {
         if (number <= 0 || number == 1)
             return 1;
