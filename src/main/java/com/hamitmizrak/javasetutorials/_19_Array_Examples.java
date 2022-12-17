@@ -6,6 +6,7 @@ import java.util.Scanner;
 // 1-9 arasında rastgele 5 tane sayı toplamını diziyle yapalım
 // bu sayılardan kaç tane tek sayı vardır, ve tek sayılar toplamı nedir ?
 
+
 // ödev:
 /*
 3 X 3 matrix olsun
@@ -18,6 +19,7 @@ public class _19_Array_Examples {
     //scanner
     private static Scanner scanner = new Scanner(System.in);
 
+    // user name letter
     public static char[] matrixMyNameLetter() {
         System.out.println("Lütfen isminizi giriniz");
         String username = scanner.nextLine();
@@ -29,8 +31,12 @@ public class _19_Array_Examples {
         return arr;
     }
 
-    public static char[][] showScreenArray() {
+    // user name letter matrix added
+    public static char[][] matrixDataAdded() {
+        //tek boyutlu dizi
         char[] arr = matrixMyNameLetter();
+
+        //çift boyutlu dizi
         char[][] matrix = new char[3][3];
         for (int i = 0; i < matrix.length; i++) {//satır
             for (int j = 0; j < matrix[i].length; j++) {//sutun
@@ -47,9 +53,10 @@ public class _19_Array_Examples {
         return matrix;
     }
 
+    // user name letter matrix showing
     public static void showingMatrixData(){
         char[][] matrix = new char[3][3];
-        matrix=showScreenArray();
+        matrix=matrixDataAdded();
         //showing
         for (int i = 0; i < matrix.length; i++) {//satır
             for (int j = 0; j < matrix[i].length; j++) {//sutun
@@ -59,6 +66,7 @@ public class _19_Array_Examples {
         }
     }
 
+    //PSVM
     public static void main(String[] args) {
         //Monad
         showingMatrixData();
