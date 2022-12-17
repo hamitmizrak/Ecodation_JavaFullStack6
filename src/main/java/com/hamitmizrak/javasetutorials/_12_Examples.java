@@ -60,7 +60,6 @@ public class _12_Examples {
         System.out.println("Çift Sayı adedi: " + evenCounter + " Çift sayı toplamı: " + evenSum);
     }
 
-
     // Kullanıcıdan alınan bir sayının faktöriyeli hesaplayan algoritma ?
     // 4!=4*3*2*1=24
     public static void userDataFactoriyel() {
@@ -117,7 +116,7 @@ public class _12_Examples {
     }
 
     public static void main(String[] args) {
-        for (; ; ) {
+        for (;;) {
             // weekDayInUserData();
             //numberResult();
             //userDataFactoriyel();
