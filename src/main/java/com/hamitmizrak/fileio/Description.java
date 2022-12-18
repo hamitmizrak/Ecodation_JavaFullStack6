@@ -6,7 +6,7 @@ public class Description {
     1-) Clean Code mantığında yazmak
     2-) kendimi tekrar etmemek (Methodlar)
     3-) Class mantığını göre oluşturmak ve OOP göre yazmak
-    4-) try-catch, Enum, class,exceptionHandling ,String, Method, etc. kullanalım
+    4-) try-catch, Enum, class,exceptionHandling ,String, Method,static etc. kullanalım
 
     Step-1) Login Ekranı
     Aşağıdaki bilgiler tek boyutlu dizide saklayalım
