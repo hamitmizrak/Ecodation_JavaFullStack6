@@ -7,6 +7,10 @@ public class Login {
     private String username;
     private String password;
 
+    //static: durağan:
+    //Kullancınının yapacağı 3 kere yanlış şifre
+    private static int COUNTER=2;
+
     //parametresiz constructor
     public Login() {
     }
@@ -44,7 +48,7 @@ public class Login {
         Scanner klavye=new Scanner(System.in);
         String[] login=new String[2];
         String username,password;
-        System.out.println("Lütfen kullanıcı adınızı giriniz");
+        System.out.println("\nLütfen kullanıcı adınızı giriniz");
         username=klavye.nextLine();
         System.out.println("Lütfen kullanıcı şifrenizi giriniz");
         password=klavye.nextLine();
@@ -58,10 +62,11 @@ public class Login {
         /*for ( String temp: getUserInput()) {
             System.out.println(temp);
         }*/
-        String [] userDataInput=new String[2];
-        userDataInput= getUserInput();
+        String [] userDataInput=getUserInput();
         Login[] user= allPersonLoginData();
         String rolles="";
+
+        if(COUNTER>=0){
         if( (userDataInput[0].equals(user[0].getUsername())) && (userDataInput[1].equals(user[0].getPassword()))){
             System.out.println("Admin");
             rolles="Admin";
@@ -72,7 +77,15 @@ public class Login {
             System.out.println("User");
             rolles="User";
         }else{
-            System.out.println("Rol dışı");
+            System.out.println("Kullanıcı username veya password yanlış girildi");
+            if(COUNTER==0){
+                System.err.println("Hakkınız kalmadı Hesabımız bloke oldu");
+                System.exit(0);
+            }
+            COUNTER--;
+            System.out.println("kalan hakkınız: "+(COUNTER+1));
+            isLogin();
+        }
         }
         return rolles;
     }

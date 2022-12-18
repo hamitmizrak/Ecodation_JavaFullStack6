@@ -28,7 +28,6 @@ public class Description {
         WRITER ==> (W+,R+,D-,C-),
         USER   ==> (W-,R+,D-,C-) (Enum)
 
-
     Step-4)  Console ekranında seçim (switch-case)
     ######## SEÇİM YAPINIZ ###########
     1-) Dosya OLUŞTUR
@@ -40,6 +39,5 @@ public class Description {
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK
     9-) Sistemden ÇIKIŞ (System.exit(0))
-
     */
 }
