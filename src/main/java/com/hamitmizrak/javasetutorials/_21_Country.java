@@ -1,5 +1,4 @@
 package com.hamitmizrak.javasetutorials;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,7 +25,6 @@ public class _21_Country {
             private String neighbourhoodName;
         }
     }
-
 }
 
 class MainClass{
