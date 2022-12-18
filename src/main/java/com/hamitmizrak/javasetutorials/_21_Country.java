@@ -18,6 +18,13 @@ public class _21_Country {
         @Getter
         @Setter
         private String cityName;
+
+        //Inner Class neighbourhood
+        public static class Neighbourhood {
+            @Getter
+            @Setter
+            private String neighbourhoodName;
+        }
     }
 
 }
@@ -29,6 +36,10 @@ class MainClass{
 
         _21_Country.City city=new _21_Country.City();
         city.setCityName("Ankara");
-        System.out.println(country.getCountryName()+" "+city.getCityName());
+
+        _21_Country.City.Neighbourhood neighbourhood=new _21_Country.City.Neighbourhood();
+        neighbourhood.setNeighbourhoodName("Kızılay");
+
+        System.out.println(country.getCountryName()+"-"+city.getCityName()+"-"+neighbourhood.getNeighbourhoodName());
     }
 }
