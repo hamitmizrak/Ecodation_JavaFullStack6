@@ -9,6 +9,7 @@ public class Description {
     4-) try-catch, Enum, class,exceptionHandling ,String, Method,static etc. kullanalım
 
     Step-1) Login Ekranı
+    Enum Rolles
     Aşağıdaki bilgiler tek boyutlu dizide saklayalım
     admin : username(admin)  ,password(passwd)
     writer: username(writer) ,password(passwd)
