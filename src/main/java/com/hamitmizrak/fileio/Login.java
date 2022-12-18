@@ -80,7 +80,8 @@ public class Login {
             System.out.println("Kullanıcı username veya password yanlış girildi");
             if(COUNTER==0){
                 System.err.println("Hakkınız kalmadı Hesabımız bloke oldu");
-                System.exit(0);
+                throw new HamitMizrakException("Dikkat: Hakkınız kalmadı ");
+                //System.exit(0);
             }
             COUNTER--;
             System.out.println("kalan hakkınız: "+(COUNTER+1));
