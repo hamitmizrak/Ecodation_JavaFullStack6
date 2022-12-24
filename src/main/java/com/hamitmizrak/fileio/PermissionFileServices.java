@@ -8,6 +8,7 @@ public class PermissionFileServices {
     private DataFileInformation dataFileInformation;
     private Scanner scanner;
     private Login login;
+    private String user;
 
     //parametresiz constructor
     public PermissionFileServices() {
@@ -34,7 +35,7 @@ public class PermissionFileServices {
     //is Login
     private boolean fileIsLogin() {
         boolean result = false;
-        String user = login.isLogin().toLowerCase();
+        user = login.isLogin().toLowerCase();
         if (user != null && !user.equals("") && !user.isEmpty()) {
             System.out.println(user + " Sistemde birisi var");
             result = true;
@@ -44,25 +45,40 @@ public class PermissionFileServices {
         return result;
     }
 
-    private void redirectAdminPage(){
-        if(fileIsLogin())
+    //redirectAdminPage
+    private void redirectAdminPage() {
+        if (fileIsLogin()){
+            System.out.println("Admin Sayfasına Yönlendiriliyorsunuz\nDevam etmek için bi tuşa basınız...");
+            scanner.nextLine();
             chooiseFile();
-        else
+        } else
             login.isLogin();
     }
 
-
+    //admin : username(admin)  ,password(passwd)
+    //writer: username(writer) ,password(passwd)
+    //user  : username(user)   ,password(passwd)
     //common Method
     private void chooiseFile() {
         while (true) {
             int chooise = chooiseUser();
+            //ADMIN  ==> (W+,R+,D+,C+),
+            //WRITER ==> (W+,R+,D-,C-),
+            //USER   ==> (W-,R+,D-,C-)
             switch (chooise) {
                 case 1:
-                    fileCreate();
+                    if (user.equals("admin"))
+                        fileCreate();
+                    else
+                        System.out.println("Yetkiniz Bulunmamaktadır. ");
                     break;
 
                 case 2:
-                    fileDelete();
+                    if (user.equals("admin"))
+                        fileDelete();
+                    else
+                        System.out.println("Yetkiniz Bulunmamaktadır. ");
+                    //(user.equals("admin") || user.equals("writer"))
                     break;
 
                 case 3:
@@ -82,14 +98,21 @@ public class PermissionFileServices {
                     break;
 
                 case 7:
-                    datafileWriter();
+                    if (user.equals("admin") || user.equals("writer"))
+                        datafileWriter();
+                    else
+                        System.out.println("Yetkiniz Bulunmamaktadır. ");
                     break;
 
                 case 8:
                     datafileReader();
                     break;
-
                 case 9:
+                    //Admin tarafından verilen kodla kişi super-admin olsun(writer,user)
+                    isRollesChange();
+                    break;
+
+                case 10:
                     logout();
                     break;
 
@@ -99,6 +122,7 @@ public class PermissionFileServices {
             }
         }
     }
+
 
     // +++++++++++++++++++++++++++++++++
     //FILE CREATE
@@ -139,6 +163,10 @@ public class PermissionFileServices {
     //READER
     private void datafileReader() {
         System.out.println("Dosya oku");
+    }
+
+    // is Rolles Change
+    private void isRollesChange() {
     }
 
     //LOGOUT

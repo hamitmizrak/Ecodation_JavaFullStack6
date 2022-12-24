@@ -38,6 +38,7 @@ public class Description {
     6-) Sistemede o path bulunan dosya isimlerini göstersin
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK
-    9-) Sistemden ÇIKIŞ (System.exit(0))
+    9-) Admin tarafından verilen kodla kişi super-admin olsun(writer,user) => NOT: sadece Admin Rol değiştirebilsin
+    10-) Sistemden ÇIKIŞ (System.exit(0))
     */
 }
