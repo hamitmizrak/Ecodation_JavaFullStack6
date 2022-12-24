@@ -33,8 +33,8 @@ public class Description {
     1-) Dosya OLUŞTUR
     2-) Dosya SİL
     3-) Dosya Bilgileri
-    4-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)
-    5-) Rol bilgimizi öğrenmek
+    4-) Rol bilgimizi öğrenmek
+    5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)
     6-) Sistemede o path bulunan dosya isimlerini göstersin
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK

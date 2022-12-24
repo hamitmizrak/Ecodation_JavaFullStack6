@@ -48,7 +48,8 @@ public class DataFileInformation {
 
     }// end parametresiz constructor
 
-    public static void main(String[] args) {
+    //PSVM
+   /* public static void main(String[] args) {
         DataFileInformation dataFileInformation=new DataFileInformation();
-    }
+    }*/
 }
