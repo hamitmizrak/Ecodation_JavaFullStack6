@@ -29,13 +29,14 @@ public class Description {
         USER   ==> (W-,R+,D-,C-) (Enum)
 
     Step-4)  Console ekranında seçim (switch-case)
+    NOT: chooise methodları interface yapalım.
     ######## SEÇİM YAPINIZ ###########
     1-) Dosya OLUŞTUR
-    2-) Dosya SİL
+    2-) Sistemede o path bulunan dosya isimlerini göstersin
     3-) Dosya Bilgileri
     4-) Rol bilgimizi öğrenmek
     5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)
-    6-) Sistemede o path bulunan dosya isimlerini göstersin
+    2-) Dosya SİL
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK
     9-) super code olan writer veya user rolü  ==>  super-admin olsun

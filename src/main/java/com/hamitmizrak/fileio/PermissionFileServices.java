@@ -24,11 +24,11 @@ public class PermissionFileServices {
     private int chooiseUser() {
         System.out.println("######## SEÇİM YAPINIZ ###########\n" +
                 "    1-) Dosya OLUŞTUR\n" +
-                "    2-) Dosya SİL\n" +
+                "    2-) Sistemede o path bulunan dosya isimlerini göstersin\n" +
                 "    3-) Dosya Bilgileri\n" +
                 "    4-) Rol bilgimizi öğrenmek\n" +
                 "    5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)\n" +
-                "    6-) Sistemede o path bulunan dosya isimlerini göstersin\n" +
+                "    6-) Dosya SİL\n" +
                 "    7-) Dosya YAZMAK\n" +
                 "    8-) Dosya OKUMAK\n" +
                 "    9-) Sistemden ÇIKIŞ");
@@ -77,11 +77,7 @@ public class PermissionFileServices {
                     break;
 
                 case 2:
-                    if (user.equals("admin"))
-                        fileDelete();
-                    else
-                        System.out.println("Yetkiniz Bulunmamaktadır. ");
-                    //(user.equals("admin") || user.equals("writer"))
+                    systemInFilesNames();
                     break;
 
                 case 3:
@@ -97,7 +93,11 @@ public class PermissionFileServices {
                     break;
 
                 case 6:
-                    systemInFilesNames();
+                    if (user.equals("admin"))
+                        fileDelete();
+                    else
+                        System.out.println("Yetkiniz Bulunmamaktadır. ");
+                    //(user.equals("admin") || user.equals("writer"))
                     break;
 
                 case 7:
@@ -131,6 +131,7 @@ public class PermissionFileServices {
     //FILE CREATE
     private void fileCreate() {
         System.out.println("Dosya oluştur");
+        systemInFilesNames();
         System.out.println("Dosya adını yazınız");
         Scanner  scanner=new Scanner(System.in);
         String fileName=scanner.nextLine().concat(".txt");
@@ -150,14 +151,26 @@ public class PermissionFileServices {
         }
     }
 
-    //FILE DELETE
-    private void fileDelete() {
-        System.out.println("Dosya sil");
+    //Files Names
+    private void systemInFilesNames() {
+        System.out.println("##### Dosya isimleri ###");
+        String staticPath=FilePathNameStaticData.FILE_PATH;
+        //sonda bulunan root silmek =>
+        String filePath=staticPath.substring(0,staticPath.length()-1);
+        for(File temp: new File("C:\\io\\ecodation").listFiles()){
+            System.out.println(temp.getName());
+        }
     }
 
     //File Information
     private void fileInformation() {
         System.out.println("Dosya bilgileri");
+        systemInFilesNames();
+        System.out.println("Dosya adını yazınız.");
+        Scanner scannerFile=new Scanner(System.in);
+        String fileName=scannerFile.nextLine();
+        file=new File(FilePathNameStaticData.FILE_PATH.concat("\\").concat(fileName).concat(".txt"));
+        System.out.println("Toplam Karakter Sayısı: "+file.length());
     }
 
     //is My Permission
@@ -170,9 +183,10 @@ public class PermissionFileServices {
         System.out.println("Dosya...");
     }
 
-    //Files Names
-    private void systemInFilesNames() {
-        System.out.println("Dosya isimleri");
+    //FILE DELETE
+    private void fileDelete() {
+        systemInFilesNames();
+        System.out.println("Dosya sil");
     }
 
     //WRITER
