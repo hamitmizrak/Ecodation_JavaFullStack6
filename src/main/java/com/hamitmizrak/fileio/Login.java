@@ -24,9 +24,9 @@ public class Login {
 
     //metotlar
    /*
-    admin : username(admin)  ,password(passwd)
-    writer: username(writer) ,password(passwd)
-    user  : username(user)   ,password(passwd)
+    admin : username(admin)  ,password(123)
+    writer: username(writer) ,password(123)
+    user  : username(user)   ,password(123)
     */
     public Login[] allPersonLoginData() {
         Login[] person = new Login[3];

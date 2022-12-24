@@ -36,9 +36,9 @@ public class DataFileInformation {
                 System.out.println("ID: "+id+" "+ file + " oluşturuldu");
             } else {
                 log.error("ID: "+id+" "+ file + " zaten oluşturulmuş");
-                System.err.println("ID: "+id+" "+ file + " zaten oluşturulmuş");
+                System.out.println("ID: "+id+" "+ file + " zaten oluşturulmuş");
                 //exception fırlatma
-                throw  new HamitMizrakException(file + " zaten oluşturulmuş");
+               // throw  new HamitMizrakException(file + " zaten oluşturulmuş");
             }
         } catch (IOException ioException) {
             ioException.printStackTrace();
