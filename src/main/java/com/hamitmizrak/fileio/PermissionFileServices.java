@@ -1,5 +1,7 @@
 package com.hamitmizrak.fileio;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class PermissionFileServices {
@@ -9,6 +11,7 @@ public class PermissionFileServices {
     private Scanner scanner;
     private Login login;
     private String user;
+    private File file;
 
     //parametresiz constructor
     public PermissionFileServices() {
@@ -128,6 +131,23 @@ public class PermissionFileServices {
     //FILE CREATE
     private void fileCreate() {
         System.out.println("Dosya oluştur");
+        System.out.println("Dosya adını yazınız");
+        Scanner  scanner=new Scanner(System.in);
+        String fileName=scanner.nextLine().concat(".txt");
+        String path=FilePathNameStaticData.FILE_PATH.concat(fileName);
+        file=new File(path);
+        try {
+            //createNewFile: zaten böyle bir dosya varsa ekleme yapmasın
+            if (file.createNewFile()) {
+                System.out.println(file + " oluşturuldu");
+            } else {
+                System.out.println(file + " zaten oluşturulmuş");
+            }
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
     }
 
     //FILE DELETE

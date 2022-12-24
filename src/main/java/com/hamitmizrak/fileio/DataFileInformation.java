@@ -23,14 +23,15 @@ public class DataFileInformation {
     //parametresiz constructor
     public DataFileInformation() {
         this.id = UUID.randomUUID().toString();
-        path = FilePathNameStaticData.FILE_PATH;
+        path = FilePathNameStaticData.FILE_PATH.concat("\\data.txt");
 
         //file
         file = new File(path);
 
         //exception handling
         try {
-            //ilgili path yoksa oluştursun varsa oluşturmasın
+            // ilgili path yoksa oluştursun varsa oluşturmasın
+            // createNewFile: zaten böyle bir dosya varsa ekleme yapmasın
             if (file.createNewFile()) {
                 log.info("ID: "+id+" "+   file + " path oluşturuldu");
                 System.out.println("ID: "+id+" "+ file + " oluşturuldu");
