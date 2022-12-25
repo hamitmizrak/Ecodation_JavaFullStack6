@@ -40,7 +40,9 @@ public class Description {
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK
     9-) Dosya ADINI DEĞİŞTİR
-    10-) super code olan writer veya user rolü  ==>  super-admin olsun
+    10-) super code olan writer veya user rolü  ==>
+    super-admin olsun kullanıcı eğer: "XKLM4512WE@" bu şifreyi biliyorsa artık bu admin olsun
+    ancak adminse tekrardan admin olmasına gerek yoktur.
     11-) Sistemden ÇIKIŞ (System.exit(0))
     */
 }

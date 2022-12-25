@@ -1,9 +1,6 @@
 package com.hamitmizrak.fileio;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -226,7 +223,7 @@ public class PermissionFileServices {
     }
 
     //WRITER Result
-    private boolean dataWriterResult(){
+    private boolean dataWriterResult() {
         System.out.println("\n### Dosya Yaz ###");
         systemInFilesNames();
         System.out.println("Yazmak istediğiniz Dosya adını yazınız");
@@ -238,38 +235,53 @@ public class PermissionFileServices {
         System.out.println("Var olan dosya bilgilerini üzerine mi yazsın E/H");
         // var olan dosyalar silinmesin diye defaultta true verdim
         boolean result = true;
-        Character userCondition=scanner.nextLine().toLowerCase().charAt(0);
-        if(userCondition=='e'){
-            result=false;
-        }else
-            result=true;
+        Character userCondition = scanner.nextLine().toLowerCase().charAt(0);
+        if (userCondition == 'e') {
+            result = false;
+        } else
+            result = true;
         return result;
     }
 
     //WRITER
     private void datafileWriter() {
-      boolean result=  dataWriterResult();
-        String userData="";
-        try(BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file, result))) {
+        boolean result = dataWriterResult();
+        String userData = "";
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true))) {
             System.out.println("Yazmak istediğinizi yazınız.");
-            userData=scanner.nextLine();
-            bufferedWriter.write("\n"+userData);
+            userData = scanner.nextLine();
+            bufferedWriter.write("\n" + userData);
             bufferedWriter.flush();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     //READER
-    private void datafileReader() {
-        System.out.println("Dosya oku");
+    private void datafileReader()  {
+        System.out.println("\n### Dosya Oku ###");
+        systemInFilesNames();
+        System.out.println("Yazmak istediğiniz Dosya adını yazınız");
+        Scanner scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine().concat(".txt");
+        String path = FilePathNameStaticData.FILE_PATH.concat(fileName);
+        file = new File(path);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
+            StringBuilder stringBuilder = new StringBuilder();
+            String rows = "";
+            while( (rows=bufferedReader.readLine())!=null  ){
+                stringBuilder.append(rows).append("\n");
+            }
+            String fileReaderRows=stringBuilder.toString();
+            System.out.println(fileReaderRows);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
 
     private void isFileRename() {
         //System.out.println("Dosya ismini değiştirmek: "+file.renameTo();
     }
-
 
     // is Rolles Change
     private void isRollesChange() {
