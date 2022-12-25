@@ -36,10 +36,11 @@ public class Description {
     3-) Dosya Bilgileri
     4-) Rol bilgimizi öğrenmek
     5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)
-    2-) Dosya SİL
+    6-) Dosya SİL
     7-) Dosya YAZMAK
     8-) Dosya OKUMAK
-    9-) super code olan writer veya user rolü  ==>  super-admin olsun
-    10-) Sistemden ÇIKIŞ (System.exit(0))
+    9-) Dosya ADINI DEĞİŞTİR
+    10-) super code olan writer veya user rolü  ==>  super-admin olsun
+    11-) Sistemden ÇIKIŞ (System.exit(0))
     */
 }

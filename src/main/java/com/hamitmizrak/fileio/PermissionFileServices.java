@@ -2,6 +2,7 @@ package com.hamitmizrak.fileio;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class PermissionFileServices {
@@ -10,7 +11,7 @@ public class PermissionFileServices {
     private DataFileInformation dataFileInformation;
     private Scanner scanner;
     private Login login;
-    private String user;
+    private String rolles;
     private File file;
 
     //parametresiz constructor
@@ -22,25 +23,27 @@ public class PermissionFileServices {
 
     //common Method
     private int chooiseUser() {
-        System.out.println("######## SEÇİM YAPINIZ ###########\n" +
-                "    1-) Dosya OLUŞTUR\n" +
+        System.out.println("    " +
+                "    1-) Dosya Oluştur\n" +
                 "    2-) Sistemede o path bulunan dosya isimlerini göstersin\n" +
                 "    3-) Dosya Bilgileri\n" +
                 "    4-) Rol bilgimizi öğrenmek\n" +
                 "    5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)\n" +
-                "    6-) Dosya SİL\n" +
-                "    7-) Dosya YAZMAK\n" +
-                "    8-) Dosya OKUMAK\n" +
-                "    9-) Sistemden ÇIKIŞ");
+                "    6-) Dosya Sil\n" +
+                "    7-) Dosya Yaz\n" +
+                "    8-) Dosya Oku\n" +
+                "    9-) Dosya Adını Değiştir\n" +
+                "    10-) super code olan writer veya user rolü  ==>  super-admin olsun\n" +
+                "    11-) Sistemden ÇIKIŞ (System.exit(0))");
         return scanner.nextInt();
     }
 
     //is Login
     private boolean fileIsLogin() {
         boolean result = false;
-        user = login.isLogin().toLowerCase();
-        if (user != null && !user.equals("") && !user.isEmpty()) {
-            System.out.println(user + " Sistemde birisi var");
+        rolles = login.isLogin().toLowerCase();
+        if (rolles != null && !rolles.equals("") && !rolles.isEmpty()) {
+            System.out.println("rolünüz: " + rolles);
             result = true;
         } else {
             System.out.println("Sistemde Böyle bir kullanıcı yoktur");
@@ -50,7 +53,7 @@ public class PermissionFileServices {
 
     //redirectAdminPage
     private void redirectAdminPage() {
-        if (fileIsLogin()){
+        if (fileIsLogin()) {
             System.out.println("Admin Sayfasına Yönlendiriliyorsunuz\nDevam etmek için bi tuşa basınız...");
             scanner.nextLine();
             chooiseFile();
@@ -70,7 +73,7 @@ public class PermissionFileServices {
             //USER   ==> (W-,R+,D-,C-)
             switch (chooise) {
                 case 1:
-                    if (user.equals("admin"))
+                    if (rolles.equals("admin"))
                         fileCreate();
                     else
                         System.out.println("Yetkiniz Bulunmamaktadır. ");
@@ -89,19 +92,19 @@ public class PermissionFileServices {
                     break;
 
                 case 5:
-                    filePermission();
+                    changeRolles();
                     break;
 
                 case 6:
-                    if (user.equals("admin"))
+                    if (rolles.equals("admin"))
                         fileDelete();
                     else
                         System.out.println("Yetkiniz Bulunmamaktadır. ");
-                    //(user.equals("admin") || user.equals("writer"))
+                    //(rolles.equals("admin") || rolles.equals("writer"))
                     break;
 
                 case 7:
-                    if (user.equals("admin") || user.equals("writer"))
+                    if (rolles.equals("admin") || rolles.equals("writer"))
                         datafileWriter();
                     else
                         System.out.println("Yetkiniz Bulunmamaktadır. ");
@@ -110,12 +113,19 @@ public class PermissionFileServices {
                 case 8:
                     datafileReader();
                     break;
+
+
                 case 9:
+                    //Admin tarafından verilen kodla kişi super-admin olsun(writer,user)
+                    isFileRename();
+                    break;
+
+                case 10:
                     //Admin tarafından verilen kodla kişi super-admin olsun(writer,user)
                     isRollesChange();
                     break;
 
-                case 10:
+                case 11:
                     logout();
                     break;
 
@@ -133,10 +143,10 @@ public class PermissionFileServices {
         System.out.println("Dosya oluştur");
         systemInFilesNames();
         System.out.println("Dosya adını yazınız");
-        Scanner  scanner=new Scanner(System.in);
-        String fileName=scanner.nextLine().concat(".txt");
-        String path=FilePathNameStaticData.FILE_PATH.concat(fileName);
-        file=new File(path);
+        Scanner scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine().concat(".txt");
+        String path = FilePathNameStaticData.FILE_PATH.concat(fileName);
+        file = new File(path);
         try {
             //createNewFile: zaten böyle bir dosya varsa ekleme yapmasın
             if (file.createNewFile()) {
@@ -154,39 +164,63 @@ public class PermissionFileServices {
     //Files Names
     private void systemInFilesNames() {
         System.out.println("##### Dosya isimleri ###");
-        String staticPath=FilePathNameStaticData.FILE_PATH;
+        String staticPath = FilePathNameStaticData.FILE_PATH;
         //sonda bulunan root silmek =>
-        String filePath=staticPath.substring(0,staticPath.length()-1);
-        for(File temp: new File("C:\\io\\ecodation").listFiles()){
+        String filePath = staticPath.substring(0, staticPath.length() - 1);
+        for (File temp : new File("C:\\io\\ecodation").listFiles()) {
             System.out.println(temp.getName());
         }
     }
 
     //File Information
     private void fileInformation() {
-        System.out.println("Dosya bilgileri");
+        System.out.println("\n#### Dosya bilgileri ####");
         systemInFilesNames();
-        System.out.println("Dosya adını yazınız.");
-        Scanner scannerFile=new Scanner(System.in);
-        String fileName=scannerFile.nextLine();
-        file=new File(FilePathNameStaticData.FILE_PATH.concat("\\").concat(fileName).concat(".txt"));
-        System.out.println("Toplam Karakter Sayısı: "+file.length());
+        System.out.println("\nDosya adını yazınız.");
+        Scanner scannerFile = new Scanner(System.in);
+        String fileName = scannerFile.nextLine();
+        file = new File(FilePathNameStaticData.FILE_PATH.concat("\\").concat(fileName).concat(".txt"));
+        System.out.println("Toplam Karakter Sayısı: " + file.length());
+        System.out.println("Dosya yazma izni: " + file.canWrite());
+        System.out.println("Dosya okuma izni: " + file.canWrite());
+        System.out.println("Dosya çalıştırma izni: " + file.canExecute());
+        System.out.println("Hashcode: " + file.hashCode());
+        System.out.println("Toplam GB: " + file.getTotalSpace());
+        System.out.println("Kullanabileceğim GB: " + file.getFreeSpace());
+        System.out.println("Kullandığım GB: " + file.getUsableSpace());
+        System.out.println("Absolute Path: " + file.getAbsolutePath());
+        System.out.println("Değiştirme Tarihi: " + new Date(file.lastModified()));
     }
 
     //is My Permission
     private void isMyPermission() {
-        System.out.println("Benim İznim");
+        System.out.println("Rolüm: " + rolles);
     }
 
     //FILE PERMISSION
-    private void filePermission() {
-        System.out.println("Dosya...");
+    private void changeRolles() {
+        System.out.println("Rol değiştir...");
     }
 
     //FILE DELETE
     private void fileDelete() {
+        System.out.println("\n### Dosya sil ###");
         systemInFilesNames();
-        System.out.println("Dosya sil");
+        System.out.println("Silmek istediğiniz Dosya adını yazınız");
+        Scanner scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine().concat(".txt");
+        String path = FilePathNameStaticData.FILE_PATH.concat(fileName);
+        file = new File(path);
+        try {
+            if (file.exists()) {
+                file.delete();
+                System.out.println(fileName + " Dosyanız silindi");
+            } else {
+                System.out.println(fileName + " Dosyanız silindi");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     //WRITER
@@ -198,6 +232,12 @@ public class PermissionFileServices {
     private void datafileReader() {
         System.out.println("Dosya oku");
     }
+
+
+    private void isFileRename() {
+        //System.out.println("Dosya ismini değiştirmek: "+file.renameTo();
+    }
+
 
     // is Rolles Change
     private void isRollesChange() {
