@@ -1,6 +1,8 @@
 package com.hamitmizrak.fileio;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
@@ -23,7 +25,7 @@ public class PermissionFileServices {
 
     //common Method
     private int chooiseUser() {
-        System.out.println("    " +
+        System.out.println("" +
                 "    1-) Dosya Oluştur\n" +
                 "    2-) Sistemede o path bulunan dosya isimlerini göstersin\n" +
                 "    3-) Dosya Bilgileri\n" +
@@ -223,9 +225,39 @@ public class PermissionFileServices {
         }
     }
 
+    //WRITER Result
+    private boolean dataWriterResult(){
+        System.out.println("\n### Dosya Yaz ###");
+        systemInFilesNames();
+        System.out.println("Yazmak istediğiniz Dosya adını yazınız");
+        Scanner scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine().concat(".txt");
+        String path = FilePathNameStaticData.FILE_PATH.concat(fileName);
+        file = new File(path);
+
+        System.out.println("Var olan dosya bilgilerini üzerine mi yazsın E/H");
+        // var olan dosyalar silinmesin diye defaultta true verdim
+        boolean result = true;
+        Character userCondition=scanner.nextLine().toLowerCase().charAt(0);
+        if(userCondition=='e'){
+            result=false;
+        }else
+            result=true;
+        return result;
+    }
+
     //WRITER
     private void datafileWriter() {
-        System.out.println("Dosya yaz");
+      boolean result=  dataWriterResult();
+        String userData="";
+        try(BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file, result))) {
+            System.out.println("Yazmak istediğinizi yazınız.");
+            userData=scanner.nextLine();
+            bufferedWriter.write("\n"+userData);
+            bufferedWriter.flush();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     //READER
