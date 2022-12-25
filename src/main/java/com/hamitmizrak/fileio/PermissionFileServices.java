@@ -113,7 +113,6 @@ public class PermissionFileServices {
                     datafileReader();
                     break;
 
-
                 case 9:
                     //Admin tarafından verilen kodla kişi super-admin olsun(writer,user)
                     isFileRename();

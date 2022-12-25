@@ -27,7 +27,7 @@ public class _21_Country {
     }
 }
 
-class MainClass{
+class MainClassData{
     public static void main(String[] args) {
         _21_Country country=new _21_Country();
         country.setCountryName("Türkiye");
