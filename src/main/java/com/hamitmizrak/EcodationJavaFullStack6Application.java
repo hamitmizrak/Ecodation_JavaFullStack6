@@ -17,7 +17,7 @@ public class EcodationJavaFullStack6Application {
     public static void main(String[] args) {
 
         //devtool active inactive
-        System.setProperty("spring.devtools.restart.enabled", "false");
+        System.setProperty("spring.devtools.restart.enabled", "true");
 
         //Disables headless JOptionPane
         System.setProperty("java.awt.headless", "false");
