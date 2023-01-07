@@ -4,6 +4,7 @@ import com.hamitmizrak.springboot.business.dto.ProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -76,6 +77,38 @@ public class ProductMvc {
         }
         model.addAttribute("key_4", productList);
         return "template4";
+    }
+
+
+    // http://localhost:8080/mvc/data5/4
+    @GetMapping("data5/{id}")
+    public String mvc5(@PathVariable("id") Long id, Model model) {
+        ProductDto productDto = ProductDto
+                .builder()
+                .id(id)
+                .name("name 3")
+                .price("price 3")
+                .build();
+        model.addAttribute("key_5", productDto);
+        return "template5";
+    }
+
+    // http://localhost:8080/mvc/data6
+    // http://localhost:8080/mvc/data6/4
+    @GetMapping({"data6","data6/{id}"})
+    public String mvc6(@PathVariable(value = "id",required = false) Long id, Model model) {
+        if(id!=null){
+            ProductDto productDto = ProductDto
+                    .builder()
+                    .id(id)
+                    .name("name 3")
+                    .price("price 3")
+                    .build();
+            model.addAttribute("key_6", productDto);
+        }else{
+            model.addAttribute("key_6", "id null veya yazılmadı");
+        }
+        return "template6";
     }
 
 }
