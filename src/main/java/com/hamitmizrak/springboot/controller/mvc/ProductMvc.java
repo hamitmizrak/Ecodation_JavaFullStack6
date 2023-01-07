@@ -3,10 +3,7 @@ package com.hamitmizrak.springboot.controller.mvc;
 import com.hamitmizrak.springboot.business.dto.ProductDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -109,6 +106,47 @@ public class ProductMvc {
             model.addAttribute("key_6", "id null veya yazılmadı");
         }
         return "template6";
+    }
+
+    //request param
+    // http://localhost:8080/mvc/data7
+    // http://localhost:8080/mvc/data7?id=4
+    @GetMapping("data7")
+    public String mvc7(@RequestParam(value = "id",required = false) Long id, Model model) {
+        if(id!=null){
+            ProductDto productDto = ProductDto
+                    .builder()
+                    .id(id)
+                    .name("name 3")
+                    .price("price 3")
+                    .build();
+            model.addAttribute("key_7", productDto);
+        }else{
+            model.addAttribute("key_7", "id null veya yazılmadı");
+        }
+        return "template7";
+    }
+
+
+
+    // http://localhost:8080/mvc/data8/4?name=data
+    @GetMapping("data8/{id}")
+    public String mvc8(
+            @PathVariable(value = "id") Long id,
+            @RequestParam(value = "name") String name,
+            Model model) {
+        if(id!=null){
+            ProductDto productDto = ProductDto
+                    .builder()
+                    .id(id)
+                    .name(name)
+                    .price("price 3")
+                    .build();
+            model.addAttribute("key_8", productDto);
+        }else{
+            model.addAttribute("key_8", "id null veya yazılmadı");
+        }
+        return "template8";
     }
 
 }
