@@ -4,9 +4,18 @@ import java.io.Serializable;
 
 public class Student extends Person implements IDatabaseCrud, Serializable {
 
+    //w3school
+    //Udemy JavaSE
+    //file
+
     @Override
     public void govdesizMethod(int number) {
         System.out.println("govdesizMethod: "+number);
+    }
+
+    @Override
+    public void govdeliMethod(int number) {
+        super.govdeliMethod(number);
     }
 
     @Override
