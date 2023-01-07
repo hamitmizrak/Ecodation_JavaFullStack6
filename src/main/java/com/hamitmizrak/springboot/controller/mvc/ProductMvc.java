@@ -1,6 +1,7 @@
 package com.hamitmizrak.springboot.controller.mvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -39,7 +40,8 @@ public class ProductMvc {
 
     // http://localhost:8080/mvc/data2
     @GetMapping("data2")
-    public String mvc2() {
+    public String mvc2(Model model) {
+        model.addAttribute("key_2","Java'dan geldim");
         return "template2";
     }
 
