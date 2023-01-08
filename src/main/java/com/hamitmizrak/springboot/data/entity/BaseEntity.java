@@ -16,6 +16,9 @@ import java.util.Date;
 @Getter
 @Setter
 
+//Auditing
+//@EntityListeners()
+
 //MappedSuperclass
 @MappedSuperclass
 public class BaseEntity  implements Serializable {
