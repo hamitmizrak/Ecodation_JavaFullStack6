@@ -79,6 +79,7 @@ public class ProductController implements IProduct{
     }
 
     //DELETE
+    //http://localhost:8080/product/delete/1
     @GetMapping("delete/{id}")
     @Override
     public String getDelete(@PathVariable("id") Long id, Model model){
@@ -93,10 +94,10 @@ public class ProductController implements IProduct{
     }
 
     //UPDATE
-    //http://localhost:8080/product/update
+    //http://localhost:8080/product/update/1
     @GetMapping("update/{id}")
     @Override
-    public String  updateGet( @PathVariable("id") Long id, Model model){
+    public String updateGet(@PathVariable("id") Long id, Model model){
         Optional<ProductEntity> findEntity= iProductRepository.findById(id);
         if(findEntity.isPresent()){
             model.addAttribute("product_key_update",findEntity.get());
@@ -107,11 +108,11 @@ public class ProductController implements IProduct{
         return "redirect:/product_list";
     }
 
-    //http://localhost:8080/product/update
+    //http://localhost:8080/product/update/1
     @PostMapping("update")
     @Override
     @Transactional//Veri güvenliğini ve veri tutarlılığı için
-    public String  updatePost(@Valid @ModelAttribute("product_key_update") ProductDto productDto, BindingResult bindingResult, Model model){
+    public String updatePost(@Valid @ModelAttribute("product_key_update") ProductDto productDto, BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
             log.error(bindingResult.hasErrors());
             return "product_update";
