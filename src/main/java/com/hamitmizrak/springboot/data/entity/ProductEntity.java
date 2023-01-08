@@ -34,4 +34,10 @@ public class ProductEntity extends BaseEntity implements Serializable {
 
     @Lob
     private String bigData;
+
+    @Column(name="product_code")
+    private String codes;
+
+    @Column(name="product_email")
+    private String emailAddress;
 }
