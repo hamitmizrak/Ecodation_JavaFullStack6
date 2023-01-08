@@ -26,6 +26,8 @@ public class ProductDto {
 
     @NotEmpty(message = "ürün codes boş geçimezsiniz")
     @Size(min = 5,max = 7,message = "ürün kodu en az 5 olacak,  en fazla 7 olmalıdır.")
+    //@Min()
+    //@Max()
     private String codes;
 
     @NotEmpty(message = "ürün email Address boş geçimezsiniz")
