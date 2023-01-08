@@ -13,7 +13,7 @@ import java.util.TimeZone;
 //MVC
 @Controller
 @RequestMapping("mvc")
-public class ProductMvc {
+public class ProductTutorialsMvc {
 
     //bean constructor
     @PostConstruct
@@ -22,7 +22,7 @@ public class ProductMvc {
     }
 
     //Normal constructor
-    public ProductMvc() {
+    public ProductTutorialsMvc() {
     }
 
     // defaultta: JSON çalışır.
