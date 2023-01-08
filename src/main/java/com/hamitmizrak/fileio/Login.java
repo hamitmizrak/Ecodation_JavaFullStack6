@@ -18,6 +18,7 @@ public class Login {
     private String username;
     private String password;
 
+
     //static: durağan:
     //Kullancınının yapacağı 3 kere yanlış şifre
     private static int COUNTER = 2;
@@ -57,7 +58,7 @@ public class Login {
         }*/
         String[] userDataInput = getUserInput();
         Login[] user = allPersonLoginData();
-        String rolles = "";
+        String rolles = null;
 
         if (COUNTER >= 0) {
             if ((userDataInput[0].equals(user[0].getUsername())) && (userDataInput[1].equals(user[0].getPassword()))) {
@@ -85,9 +86,9 @@ public class Login {
     }
 
     //psvm
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         //instance
         Login login = new Login();
         login.isLogin();
-    }
+    }*/
 }

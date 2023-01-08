@@ -129,11 +129,11 @@ public class ProductMvc {
 
 
 
-    // http://localhost:8080/mvc/data8/4?name=data
+    // http://localhost:8080/mvc/data8/4?adi=data
     @GetMapping("data8/{id}")
     public String mvc8(
             @PathVariable(value = "id") Long id,
-            @RequestParam(value = "name") String name,
+            @RequestParam(value = "adi") String name,
             Model model) {
         if(id!=null){
             ProductDto productDto = ProductDto
