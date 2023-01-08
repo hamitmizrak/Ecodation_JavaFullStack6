@@ -33,6 +33,13 @@ public class ProductEntity {
     @Column(name="product_price")
     private String price;
 
+    //Javada olsun ama database kaydetmesin
+    @Transient
+    private String justJavaData;
+
+    @Lob
+    private String bigData;
+
     @Column(name="created_date")
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
