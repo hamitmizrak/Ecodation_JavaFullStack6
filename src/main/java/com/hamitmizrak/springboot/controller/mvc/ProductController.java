@@ -24,7 +24,6 @@ import java.util.Optional;
 @Controller
 @RequestMapping("product")
 
-
 public class ProductController implements IProduct{
 
     //Injection
@@ -93,5 +92,33 @@ public class ProductController implements IProduct{
         return "product_list";
     }
 
+    //UPDATE
+    //http://localhost:8080/product/update
+    @GetMapping("update/{id}")
+    @Override
+    public String  updateGet( @PathVariable("id") Long id, Model model){
+        Optional<ProductEntity> findEntity= iProductRepository.findById(id);
+        if(findEntity.isPresent()){
+            model.addAttribute("product_key_update",findEntity.get());
+            return "product_update";
+        }else{
+            model.addAttribute("product_key_update",id+" nolu veri bulunamadı");
+        }
+        return "redirect:/product_list";
+    }
+
+    //http://localhost:8080/product/update
+    @PostMapping("update")
+    @Override
+    @Transactional//Veri güvenliğini ve veri tutarlılığı için
+    public String  updatePost(@Valid @ModelAttribute("product_key_update") ProductDto productDto, BindingResult bindingResult, Model model){
+        if(bindingResult.hasErrors()){
+            log.error(bindingResult.hasErrors());
+            return "product_update";
+        }
+        ProductEntity productEntity= modelMapperBean.modelMapperMethod().map(productDto, ProductEntity.class);
+        iProductRepository.save(productEntity);
+        return "redirect:/product_list";
+    }
 
 }
