@@ -17,6 +17,7 @@ public class Login {
     //field
     private String username;
     private String password;
+    private static String rolles = null;
 
 
     //static: durağan:
@@ -58,7 +59,6 @@ public class Login {
         }*/
         String[] userDataInput = getUserInput();
         Login[] user = allPersonLoginData();
-        String rolles = null;
 
         if (COUNTER >= 0) {
             if ((userDataInput[0].equals(user[0].getUsername())) && (userDataInput[1].equals(user[0].getPassword()))) {

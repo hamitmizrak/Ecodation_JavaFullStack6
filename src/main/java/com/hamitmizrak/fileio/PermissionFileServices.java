@@ -27,7 +27,7 @@ public class PermissionFileServices {
                 "    2-) Sistemede o path bulunan dosya isimlerini göstersin\n" +
                 "    3-) Dosya Bilgileri\n" +
                 "    4-) Rol bilgimizi öğrenmek\n" +
-                "    5-) Dosya izinleri(Rol değiştir sadece admin yapabilir.)\n" +
+                "    5-) Dosya izinleri(Rol değiştir sadece admin yapabilir veya super code ile yapabilirsiniz.)\n" +
                 "    6-) Dosya Sil\n" +
                 "    7-) Dosya Yaz\n" +
                 "    8-) Dosya Oku\n" +
@@ -91,7 +91,8 @@ public class PermissionFileServices {
                     break;
 
                 case 5:
-                    changeRolles();
+                    if (!rolles.equals("admin"))
+                        changeRolles();
                     break;
 
                 case 6:
@@ -196,8 +197,23 @@ public class PermissionFileServices {
     }
 
     //FILE PERMISSION
+    /*
+    super code olan writer veya user rolü  ==>
+    super-admin olsun kullanıcı eğer: "XKLM4512WE@" bu şifreyi biliyorsa artık bu admin olsun
+    ancak adminse tekrardan admin olmasına gerek yoktur.
+    * */
     private void changeRolles() {
-        System.out.println("Rol değiştir...");
+        System.out.println("Rolünüz: "+rolles);
+        System.out.println("Rolünüzü ancak super code varsa değiştirebilirsiniz ");
+        scanner = new Scanner(System.in);
+        System.out.println("Lütfen Super code giriniz");
+        String superCodes = scanner.nextLine();
+        if (superCodes.equals("asd")) {
+            rolles = "admin";
+            System.out.println("Rolünüz artık değişti: " + rolles);
+        }else{
+            System.out.println("Rolünüzü değişmedi: "+rolles);
+        }
     }
 
     //FILE DELETE
@@ -257,7 +273,7 @@ public class PermissionFileServices {
     }
 
     //READER
-    private void datafileReader()  {
+    private void datafileReader() {
         System.out.println("\n### Dosya Oku ###");
         systemInFilesNames();
         System.out.println("Yazmak istediğiniz Dosya adını yazınız");
@@ -268,10 +284,10 @@ public class PermissionFileServices {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             StringBuilder stringBuilder = new StringBuilder();
             String rows = "";
-            while( (rows=bufferedReader.readLine())!=null  ){
+            while ((rows = bufferedReader.readLine()) != null) {
                 stringBuilder.append(rows).append("\n");
             }
-            String fileReaderRows=stringBuilder.toString();
+            String fileReaderRows = stringBuilder.toString();
             System.out.println(fileReaderRows);
         } catch (Exception e) {
             e.printStackTrace();

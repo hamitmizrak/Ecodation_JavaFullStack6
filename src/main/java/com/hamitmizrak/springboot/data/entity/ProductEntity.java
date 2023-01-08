@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 @Log4j2
-@RequiredArgsConstructor //for inject
+//@RequiredArgsConstructor //for inject
 
 //Entity
 @Entity
