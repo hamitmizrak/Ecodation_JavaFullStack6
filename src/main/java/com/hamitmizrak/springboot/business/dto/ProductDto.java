@@ -18,6 +18,7 @@ import javax.validation.constraints.*;
 public class ProductDto {
 
     private Long id;
+
     @NotEmpty(message = "ürün adını boş geçilmez")
     private String name;
 

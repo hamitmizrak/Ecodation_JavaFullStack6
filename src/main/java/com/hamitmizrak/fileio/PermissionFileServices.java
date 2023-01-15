@@ -199,7 +199,7 @@ public class PermissionFileServices {
     //FILE PERMISSION
     /*
     super code olan writer veya user rolü  ==>
-    super-admin olsun kullanıcı eğer: "XKLM4512WE@" bu şifreyi biliyorsa artık bu admin olsun
+    super-admin olsun kullanıcı eğer: "asd" bu şifreyi biliyorsa artık bu admin olsun
     ancak adminse tekrardan admin olmasına gerek yoktur.
     * */
     private void changeRolles() {

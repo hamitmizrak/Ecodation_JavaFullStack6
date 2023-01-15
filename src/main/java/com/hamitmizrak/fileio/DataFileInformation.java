@@ -1,11 +1,7 @@
 package com.hamitmizrak.fileio;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
@@ -46,11 +42,5 @@ public class DataFileInformation {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-
     }// end parametresiz constructor
-
-    //PSVM
-   /* public static void main(String[] args) {
-        DataFileInformation dataFileInformation=new DataFileInformation();
-    }*/
 }
