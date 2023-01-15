@@ -15,7 +15,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 //@SpringBootApplication
 
 //Auditing
-@EnableJpaAuditing(auditorAwareRef = "auditorAwareBean")
+//@EnableJpaAuditing(auditorAwareRef = "auditorAwareBean")
 
 public class EcodationJavaFullStack6Application {
 

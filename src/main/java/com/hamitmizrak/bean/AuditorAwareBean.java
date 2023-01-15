@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
 
 
+public class AuditorAwareBean{
+
+}
+
+/*
 @Configuration
 public class AuditorAwareBean {
 
@@ -14,4 +19,5 @@ public class AuditorAwareBean {
         return new AuditorAwareImpl();
     }
 }
+*/
 

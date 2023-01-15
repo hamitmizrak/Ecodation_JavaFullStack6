@@ -50,13 +50,13 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     return "product_list";
     }
     -->
-<a th:href="@{/}" class="btn btn-primary">Veri Ekle</a>
-<table class="table table-hover table-striped table-bordered table-dark">
+<a th:href="@{/speed}" class="btn btn-primary btn-sm mt-5 mb-5">Veri Ekle</a>
+<table class="table table-hover table-striped table-bordered table-dark table-sm" style="cursor:pointer;">
     <thead>
     <tr>
         <th>ADI</th>
-        <th>FİYATI</th>
-        <th>CODES</th>
+        <th>SURNAME</th>
+        <th>PASSWORD</th>
         <th>Email</th>
         <th>Update</th>
         <th>Show</th>
@@ -65,11 +65,11 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     </thead>
 
     <tbody>
-    <tr th:each="product:${product_key_list}">
-        <td th:text="${product.name}"></td>
-        <td th:text="${product.price}"></td>
-        <td th:text="${product.codes}"></td>
-        <td th:text="${product.emailAddress}"></td>
+    <tr th:each="register:${register_list}">
+        <td th:text="${register.name}"></td>
+        <td th:text="${register.surname}"></td>
+        <td th:text="${register.password}"></td>
+        <td th:text="${register.email}"></td>
         <td> <i class="fa-solid fa-pen-nib"></i></td>
         <td> <i class="fa-regular fa-eye-slash"></i></td>
         <td> <i class="fa-solid fa-trash"></i></td>
