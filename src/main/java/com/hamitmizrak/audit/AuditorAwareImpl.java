@@ -1,4 +1,4 @@
-package com.hamitmizrak.springboot.audit;
+package com.hamitmizrak.audit;
 
 import org.springframework.data.domain.AuditorAware;
 

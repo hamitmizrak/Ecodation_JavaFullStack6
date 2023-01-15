@@ -1,5 +1,6 @@
-package com.hamitmizrak.springboot.data.entity;
+package com.hamitmizrak.data.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -19,10 +20,11 @@ import java.util.Date;
 
 //Auditing
 @EntityListeners(AuditingEntityListener.class)
+@JsonIgnoreProperties(value = { "created_date,updated_dated" })
 
 //MappedSuperclass
 @MappedSuperclass
-public class BaseEntity  implements Serializable {
+abstract public class BaseEntity  implements Serializable {
     public static final Long serialVersionUID=1L;
 
     //ID
@@ -39,7 +41,7 @@ public class BaseEntity  implements Serializable {
 
     //audit
     //Kim oluşturdu
-    @CreatedBy
+   @CreatedBy
     @Column(name="created_user")
     private String createdUser;
 

@@ -1,6 +1,6 @@
-package com.hamitmizrak.springboot.bean;
+package com.hamitmizrak.bean;
 
-import com.hamitmizrak.springboot.business.dto.ProductDto;
+import com.hamitmizrak.business.dto.RegisterDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,12 +8,11 @@ import org.springframework.context.annotation.Configuration;
 public class DataBean {
 
     @Bean
-    public ProductDto productDto(){
-        return ProductDto
+    public RegisterDto productDto(){
+        return RegisterDto
                 .builder()
                 .id(1L)
                 .name("computer")
-                .price("35.000")
                 .build();
     }
 

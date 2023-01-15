@@ -1,0 +1,85 @@
+<!doctype html>
+<html th:lang="${#locale.language}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf String</title>
+
+    <!-- Turkce karakter -->
+    <meta charset="utf-8">
+
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- seo -->
+    <meta name="keywords" content="html5,css3,js,jquery,bootstrap,react,javase"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- react libraries -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/js/index.js}"></script>
+</head>
+
+<body class="container">
+<!-- starts codes -->
+
+
+<!--
+//LIST
+//http://localhost:8080/product/list
+@GetMapping("list")
+@Override
+public String getAllDataList(Model model){
+List<ProductEntity> productEntityList= iProductRepository.findAll();
+    model.addAttribute("product_key_list",productEntityList);
+    return "product_list";
+    }
+    -->
+<a th:href="@{/}" class="btn btn-primary">Veri Ekle</a>
+<table class="table table-hover table-striped table-bordered table-dark">
+    <thead>
+    <tr>
+        <th>ADI</th>
+        <th>FİYATI</th>
+        <th>CODES</th>
+        <th>Email</th>
+        <th>Update</th>
+        <th>Show</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="product:${product_key_list}">
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.codes}"></td>
+        <td th:text="${product.emailAddress}"></td>
+        <td> <i class="fa-solid fa-pen-nib"></i></td>
+        <td> <i class="fa-regular fa-eye-slash"></i></td>
+        <td> <i class="fa-solid fa-trash"></i></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- ends codes -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
