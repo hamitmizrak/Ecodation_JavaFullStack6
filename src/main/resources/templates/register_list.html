@@ -101,6 +101,9 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
 <script type="text/javascript">
     function deleteSweetAlertCompany(url){
         swal({
+            position: 'top-end',
+            showConfirmButton: true,
+            timer: 1500,
             title: "Silmek istediğinizden emin misiniz?",
             text: "Silindikten sonra tekrar geri alınamaz.",
             icon: "warning",
