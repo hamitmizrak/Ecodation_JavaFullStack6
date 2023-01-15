@@ -83,7 +83,7 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     </tbody>
 </table>
 
-
+<!--datatables-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
 <script>
@@ -96,6 +96,29 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
         });
     })
 </script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+    function deleteSweetAlertCompany(url){
+        swal({
+            title: "Silmek istediğinizden emin misiniz?",
+            text: "Silindikten sonra tekrar geri alınamaz.",
+            icon: "warning",
+            buttons: ["İptal", "Sil"],
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {        swal("Kayıt başarılı bir şekilde silindi.", {
+                    icon: "success",
+                });
+                    window.location.href = url;
+                } else {
+                    swal("İptal edildi.",{
+                        icon: "warning",
+                    });
+                }
+            });
+    }</script>
 
 <!-- ends codes -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
