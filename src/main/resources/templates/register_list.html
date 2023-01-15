@@ -50,14 +50,15 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     return "product_list";
     }
     -->
-<a th:href="@{/speed}" class="btn btn-primary btn-sm mt-5 mb-5">Veri Ekle</a>
+<a th:href="@{/speed}" class="btn btn-warning btn-sm mt-5 mb-5">Hızlı Veri Ekle</a>
+<a th:href="@{/save/register}" class="btn btn-primary btn-sm mt-5 mb-5">Üye  Ekle</a>
 <table class="table table-hover table-striped table-bordered table-dark table-sm" style="cursor:pointer;">
     <thead>
     <tr>
-        <th>ADI</th>
-        <th>SURNAME</th>
-        <th>PASSWORD</th>
-        <th>Email</th>
+        <th  th:text="#{register.name}"></th>
+        <th  th:text="#{register.surname}"></th>
+        <th  th:text="#{register.password}"></th>
+        <th  th:text="#{register.email}"></th>
         <th>Update</th>
         <th>Show</th>
         <th>Delete</th>
