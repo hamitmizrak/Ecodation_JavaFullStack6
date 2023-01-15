@@ -41,10 +41,36 @@
     <!-- start codes -->
 
     <h1>CREATE</h1>
-    <form th:action="/save/register" th:method="post" th:object="${register_key}">
-        <div class="form-group">
+    <form th:action="@{/save/register}" th:method="post" th:object="${register_key}">
+        <div class="form-group mb-4">
             <label for="name">ADINIZ</label>
-            <input type="text" class="form-control" required="true" autofocus="true" placeholder="adınız" id="name" name="name"/>
+            <input type="text" class="form-control" th:field="*{name}"  autofocus="true" placeholder="adınız" id="name" name="name"/>
+            <div class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+        </div>
+
+        <div class="form-group mb-4">
+            <label for="name">SOYADINIZ</label>
+            <input type="text" class="form-control" th:field="*{surname}" autofocus="false" placeholder="soyadınız" id="surname" name="surname"/>
+            <div class="text-danger" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div>
+        </div>
+
+
+        <div class="form-group mb-4">
+            <label for="emailAddress">EMAILINIZ</label>
+            <input type="text" class="form-control" th:field="*{emailAddress}"  autofocus="false" placeholder="emailAddress" id="emailAddress" name="emailAddress"/>
+            <div class="text-danger" th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></div>
+        </div>
+
+
+        <div class="form-group mb-4">
+            <label for="name">ŞİFRE</label>
+            <input type="text" class="form-control" th:field="*{password}" autofocus="false" placeholder="password" id="password" name="password"/>
+            <div class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        </div>
+
+        <div class="form-group mb-4">
+          <input type="reset" class="btn btn-danger" value="Temizle"/>
+          <input type="submit" class="btn btn-primary" value="Gönder"/>
         </div>
     </form>
 
