@@ -33,6 +33,9 @@
 
     <link rel="stylesheet" th:href="@{/css/index.css}">
     <script th:src="@{/js/index.js}"></script>
+
+    <!-- dataTables CSS: paging and sorting -->
+    <link rel="stylesheet"     type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css" />
 </head>
 
 <body class="container">
@@ -52,7 +55,7 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     -->
 <a th:href="@{/speed}" class="btn btn-warning btn-sm mt-5 mb-5">Hızlı Veri Ekle</a>
 <a th:href="@{/save/register}" class="btn btn-primary btn-sm mt-5 mb-5">Üye  Ekle</a>
-<table class="table table-hover table-striped table-bordered table-dark table-sm" style="cursor:pointer;">
+<table class="table table-hover table-striped table-bordered table-dark table-sm" style="cursor:pointer;" id="datalistregisterTable">
     <thead>
     <tr>
         <th  th:text="#{data.id}"></th>
@@ -80,6 +83,19 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
     </tbody>
 </table>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#datalistregisterTable").DataTable({
+            'aoColumnDefs': [{
+                'bSortable': false,
+                'aTargets': [-1] /* 1st one, start by the right */
+            }]
+        });
+    })
+</script>
 
 <!-- ends codes -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
