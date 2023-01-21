@@ -78,7 +78,15 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
         <td th:text="${register.email}"></td>
         <td> <i class="fa-solid fa-pen-nib text-primary"></i></td>
         <td> <i class="fa-regular fa-eye-slash text-info"></i></td>
-        <td> <i class="fa-solid fa-trash text-danger"></i></td>
+        <!--<td> <a th:href="@{/delete/{id}(id=${register.id})}" th:onclick="if(!(confirm('Silmek istiyor musunuz'))) return false"><i class="fa-solid fa-trash text-danger"></i></a> </td>-->
+        <td>
+        <a
+        th:onclick="
+        '
+        deleteSweetAlertRegister(\'/delete/'+${register.id}+'\')
+        '
+        "><i class="fa-solid fa-trash text-danger"></i>
+        </a> </td>
     </tr>
     </tbody>
 </table>
@@ -99,11 +107,10 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script type="text/javascript">
-    function deleteSweetAlertCompany(url){
+    function deleteSweetAlertRegister(url){
         swal({
             position: 'top-end',
             showConfirmButton: true,
-            timer: 1500,
             title: "Silmek istediğinizden emin misiniz?",
             text: "Silindikten sonra tekrar geri alınamaz.",
             icon: "warning",

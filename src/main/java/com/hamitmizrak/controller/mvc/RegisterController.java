@@ -94,7 +94,7 @@ public class RegisterController implements IRegister {
     }
 
     //DELETE
-    //http://localhost:8080/register/delete/1
+    //http://localhost:8080/delete/1
     @GetMapping("delete/{id}")
     @Override
     public String getDelete(@PathVariable("id") Long id, Model model) {
