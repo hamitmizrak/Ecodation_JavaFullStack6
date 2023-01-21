@@ -5,10 +5,13 @@ import org.springframework.validation.BindingResult;
 
 public interface IRegister {
 
-
     //Speed
     //http://localhost:8080/product/speed
     String  createSpeed(Model model);
+
+    //LIST
+    //http://localhost:8080/product/list
+    String getAllDataList(Model model);
 
     //CREATE
     //http://localhost:8080/product/create
@@ -16,10 +19,6 @@ public interface IRegister {
 
     //http://localhost:8080/product/create
     String  createPost(RegisterDto productDto, BindingResult bindingResult, Model model);
-
-    //LIST
-    //http://localhost:8080/product/list
-    String getAllDataList(Model model);
 
     //FIND
     //http://localhost:8080/product/find/1

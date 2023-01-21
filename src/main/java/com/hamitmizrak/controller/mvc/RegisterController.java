@@ -44,6 +44,16 @@ public class RegisterController implements IRegister {
         return "redirect:/list/register";
     }
 
+    //LIST
+    //http://localhost:8080/list/register
+    @GetMapping("list/register")
+    @Override
+    public String getAllDataList(Model model) {
+        List<RegisterEntity> productEntityList = iRegisterRepository.findAll();
+        model.addAttribute("register_list", productEntityList);
+        return "register_list";
+    }
+
     //CREATE
     //http://localhost:8080/save/register
     @GetMapping("save/register")
@@ -67,15 +77,7 @@ public class RegisterController implements IRegister {
         return "redirect:/list/register";
     }
 
-    //LIST
-    //http://localhost:8080/list/register
-    @GetMapping("list/register")
-    @Override
-    public String getAllDataList(Model model) {
-        List<RegisterEntity> productEntityList = iRegisterRepository.findAll();
-        model.addAttribute("register_list", productEntityList);
-        return "register_list";
-    }
+
 
     //FIND
     //http://localhost:8080/find/register
@@ -136,5 +138,4 @@ public class RegisterController implements IRegister {
         iRegisterRepository.save(productEntity);
         return "redirect:/list/register";
     }
-
 }

@@ -53,13 +53,11 @@
             <div class="text-danger" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div>
         </div>
 
-
         <div class="form-group mb-4">
             <label for="email">EMAILINIZ</label>
             <input type="text" class="form-control" th:field="*{email}"  autofocus="false" placeholder="email" id="email" name="email"/>
             <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
-
 
         <div class="form-group mb-4">
             <label for="name">TELEPHONE</label>
@@ -67,14 +65,11 @@
             <div class="text-danger" th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}"></div>
         </div>
 
-
         <div class="form-group mb-4">
             <label for="password">ŞİFRE</label>
             <input type="text" class="form-control" th:field="*{password}" autofocus="false" placeholder="password" id="password" name="password"/>
             <div class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
         </div>
-
-
 
         <div class="form-group mb-4">
             <input type="reset" class="btn btn-danger" value="Temizle"/>

@@ -40,19 +40,6 @@
 
 <body class="container">
 <!-- starts codes -->
-
-
-<!--
-//LIST
-//http://localhost:8080/product/list
-@GetMapping("list")
-@Override
-public String getAllDataList(Model model){
-List<ProductEntity> productEntityList= iProductRepository.findAll();
-    model.addAttribute("product_key_list",productEntityList);
-    return "product_list";
-    }
-    -->
 <a th:href="@{/speed}" class="btn btn-warning btn-sm mt-5 mb-5">Hızlı Veri Ekle</a>
 <a th:href="@{/save/register}" class="btn btn-primary btn-sm mt-5 mb-5">Üye  Ekle</a>
 <table class="table table-hover table-striped table-bordered table-dark table-sm" style="cursor:pointer;" id="datalistregisterTable">
