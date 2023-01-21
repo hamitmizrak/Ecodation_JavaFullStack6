@@ -1,23 +1,17 @@
-package com.hamitmizrak.bean;
+package com.hamitmizrak.audit;
 
-import com.hamitmizrak.audit.AuditorAwareImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
 
 
-public class AuditorAwareBean{
-
-}
-
-/*
 @Configuration
 public class AuditorAwareBean {
 
     @Bean
-    public AuditorAware<String> auditorAwareBean(){
+    public AuditorAware<String> auditorAwareMethod(){
         return new AuditorAwareImpl();
     }
 }
-*/
+
 

@@ -19,10 +19,10 @@ import java.util.Date;
 @Setter
 
 //Auditing
-/*
+
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = { "created_date,updated_dated" })
-*/
+
 
 //MappedSuperclass
 @MappedSuperclass
@@ -45,7 +45,7 @@ abstract public class BaseEntity  implements Serializable {
     //Kim oluşturdu
    @CreatedBy
     @Column(name="created_user")
-    private String createdUser;
+    private String createdBy;
 
     //Kim ne zaman oluşturdu
     @Column(name="created_user_date")
@@ -55,7 +55,7 @@ abstract public class BaseEntity  implements Serializable {
     //Kim güncelledi
     @LastModifiedBy
     @Column(name="updated_user")
-    private String updatedUser;
+    private String updatedBy;
 
     //Kim ne zaman oluşturdu
     @Column(name="updated_user_date")
