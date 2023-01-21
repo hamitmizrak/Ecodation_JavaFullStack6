@@ -22,13 +22,12 @@ import java.util.Optional;
 
 //controller
 @Controller
-//@RequestMapping("product")
+//@RequestMapping("register")
 public class RegisterController implements IRegister {
 
     //Injection
     private final IRegisterRepository iRegisterRepository;
     private final ModelMapperBean modelMapperBean;
-
 
     //Speed
     //http://localhost:8080/speed
