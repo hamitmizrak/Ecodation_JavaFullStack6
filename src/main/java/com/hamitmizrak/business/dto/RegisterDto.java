@@ -26,12 +26,12 @@ public class RegisterDto {
     private String surname;
 
     @NotEmpty(message = " şifre boş geçimezsiniz")
-    @Size(min = 5,max = 7,message = "şifre kodu en az 5 olacak,  en fazla 7 olmalıdır.")
+    @Size(min = 5,max = 14,message = "şifre kodu en az 5 olacak,  en fazla 14 olmalıdır.")
     //@Min()
     //@Max()
     private String password;
 
     @NotEmpty(message = " email Address boş geçimezsiniz")
     @Email(message = " email uygun formatta girmediniz")
-    private String emailAddress;
+    private String email;
 }

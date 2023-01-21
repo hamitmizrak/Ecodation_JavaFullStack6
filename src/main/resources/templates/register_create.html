@@ -56,9 +56,9 @@
 
 
         <div class="form-group mb-4">
-            <label for="emailAddress">EMAILINIZ</label>
-            <input type="text" class="form-control" th:field="*{emailAddress}"  autofocus="false" placeholder="emailAddress" id="emailAddress" name="emailAddress"/>
-            <div class="text-danger" th:if="${#fields.hasErrors('emailAddress')}" th:errors="*{emailAddress}"></div>
+            <label for="email">EMAILINIZ</label>
+            <input type="text" class="form-control" th:field="*{email}"  autofocus="false" placeholder="email" id="email" name="email"/>
+            <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
         </div>
 
 
