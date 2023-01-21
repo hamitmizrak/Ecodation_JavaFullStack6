@@ -35,6 +35,9 @@ public class RegisterEntity extends BaseEntity implements Serializable {
     @Column(name="email")
     private String email;
 
+    @Column(name="telephone")
+    private String telephone;
+
     @Column(name="password")
     private String password;
 }

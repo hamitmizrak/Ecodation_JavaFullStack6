@@ -63,6 +63,8 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
         <th  th:text="#{data.surname}"></th>
         <th  th:text="#{data.password}"></th>
         <th  th:text="#{data.email}"></th>
+        <th  th:text="#{data.telephone}"></th>
+        <th  th:text="#{data.created}"></th>
         <th>Update</th>
         <th>Show</th>
         <th>Delete</th>
@@ -76,6 +78,8 @@ List<ProductEntity> productEntityList= iProductRepository.findAll();
         <td th:text="${register.surname}"></td>
         <td th:text="${register.password}"></td>
         <td th:text="${register.email}"></td>
+        <td th:text="${register.telephone}"></td>
+        <td th:text="${register.systemCreatedDate}"></td>
         <td> <a th:href="@{/update/register/{id}(id=${register.id})}"><i class="fa-solid fa-wrench  text-primary"></i></a> </td>
         <td> <a th:href="@{/find/register/{id}(id=${register.id})}"><i class="fa-regular fa-eye-slash text-info"></i></a> </td>
         <!--<td> <a th:href="@{/delete/register/{id}(id=${register.id})}" th:onclick="if(!(confirm('Silmek istiyor musunuz'))) return false"><i class="fa-solid fa-trash text-danger"></i></a> </td>-->
