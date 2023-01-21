@@ -38,13 +38,21 @@
 <body class="container">
 
     <!-- start codes -->
-    <h1 class="text-primary">Template -8</h1>
+    <h1 class="text-primary">Detail Page</h1>
+    <p th:text="${find_key}"></p>
 
-    <div class="alert alert-primary" role="alert">
-        <strong th:text="${key_8}">Alert Heading</strong>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 th:text="${find_key.id}"  class="card-title"></h5>
+            <p th:text="${find_key.name}" class="card-text"></p>
+            <p th:text="${find_key.surname}" class="card-text"></p>
+            <p th:text="${find_key.email}" class="card-text"></p>
+            <p th:text="${find_key.password}" class="card-text"></p>
+            <a  href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
     </div>
 
-
+    <a th:href="@{/list/register}" class="btn btn-warning">Register</a>
 
     <!-- ends codes -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
