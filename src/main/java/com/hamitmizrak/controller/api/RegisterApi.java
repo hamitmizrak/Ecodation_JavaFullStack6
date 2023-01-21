@@ -24,11 +24,9 @@ import java.util.Optional;
 @RequestMapping("api_v1_register")
 public class RegisterApi {
 
-
     //Injection
     private final IRegisterRepository iRegisterRepository;
     private final ModelMapperBean modelMapperBean;
-
 
     //Speed
     //http://localhost:8080/api_v1_register/speed
@@ -51,7 +49,6 @@ public class RegisterApi {
         List<RegisterEntity> productEntityList = iRegisterRepository.findAll();
         return productEntityList;
     }
-
 
     //http://localhost:8080/api_v1_register/save/register
     @PostMapping("save/register")
