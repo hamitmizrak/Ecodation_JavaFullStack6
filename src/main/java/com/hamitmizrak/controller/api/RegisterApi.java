@@ -2,15 +2,19 @@ package com.hamitmizrak.controller.api;
 
 
 import com.hamitmizrak.bean.ModelMapperBean;
+import com.hamitmizrak.business.dto.RegisterDto;
 import com.hamitmizrak.data.entity.RegisterEntity;
 import com.hamitmizrak.data.repository.IRegisterRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 //Lombok
 @RequiredArgsConstructor
@@ -47,5 +51,24 @@ public class RegisterApi {
         List<RegisterEntity> productEntityList = iRegisterRepository.findAll();
         return productEntityList;
     }
+
+
+    //http://localhost:8080/api_v1_register/save/register
+    @PostMapping("save/register")
+    public ResponseEntity<RegisterDto>  createApiPost(@RequestBody  RegisterDto productDto) {
+        RegisterEntity productEntity = modelMapperBean.modelMapperMethod().map(productDto, RegisterEntity.class);
+        iRegisterRepository.save(productEntity);
+        return ResponseEntity.ok(productDto) ;
+    }
+
+
+    //FIND
+    //http://localhost:8080/api_v1_register/find/register
+    //http://localhost:8080/api_v1_register/find/register/1
+    @GetMapping({"find/register/{id}","find/register"})
+    public RegisterEntity getFindList(@PathVariable("id") Long id) {
+        return iRegisterRepository.findById(id).get();
+    }
+
 
 }
