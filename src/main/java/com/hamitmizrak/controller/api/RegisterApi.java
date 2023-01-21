@@ -71,4 +71,12 @@ public class RegisterApi {
     }
 
 
+    //DELETE
+    //http://localhost:8080/api_v1_register/delete/register/1
+    @DeleteMapping("delete/register/{id}")
+    public Long getDelete(@PathVariable("id") Long id) {
+        iRegisterRepository.deleteById(id);
+        return id;
+    }
+
 }
